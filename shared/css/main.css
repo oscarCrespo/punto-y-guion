@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#body {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#wrapper {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 1000px;
+  height: 100%;
+  position: fixed;
+  z-index: 800;
+}
+.bg1 {
+  width: 100%;
+  height: 100%;
+  background: #050006 url("../img/bg1.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+.bg2 {
+  background: #050006 url("../img/bg2.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+.bg3 {
+  background: #050006 url("../img/bg3.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+#preloader {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 100px;
+  height: 100px;
+  background: url("../img/bg2.jpg") no-repeat center center, url("../img/bg3.jpg") no-repeat;
+}
+header {
+  top: 20px;
+  left: 20px;
+  width: 400px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 800;
+}
+#logo {
+  display: block;
+  width: 228px;
+  height: 90px;
+  background: url("../img/logoPyg.svg") no-repeat center;
+  background-size: contain;
+}
+header nav {
+  margin-top: 60px;
+  color: #fff;
+  width: 180px;
+  height: 105px;
+}
+header nav a {
+  text-decoration: none;
+  color: #fff;
+}
+.btn {
+  border-top: 1px solid #fff;
+  width: 110px;
+  height: 31px;
+  margin-top: 3px;
+  line-height: 1;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0.42, 0, 1.02);
+  font-weight: 600;
+  padding: 5px 5px 0 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.btn span{
+  transition: all 0.15s cubic-bezier(0.31, -0.06, 0.1, 1.55);
+  transition-delay: 0.05s;
+  line-height: 1;
+  margin-left:1%;
+}
+.btn:hover span{
+  padding-top: 20px;
+  font-weight: 300;
+  margin-left: 20%;
+  font-size: 20px;
+  color: #3fffe2;
+}
+.btn:hover{
+width: 150px;
+  
+}
+#showcaser {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 100;
+}
+#mssBienvenida {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  left: 0;
+  right: 0;
+ /* overflow: hidden;*/
+  color: #3fffe2;
+  font-size: 20px;
+  position: absolute;
+}
+#mssBienvenida div {
+  display: block;
+  line-height: 1;
+  padding-bottom: 5px;
+  position: relative;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+/*#mssBienvenida div.a1,
+#mssBienvenida div.a3 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 300;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+#mssBienvenida div.a2 {
+  margin-top: -25px;
+  margin-left: -10px;
+}
+#mssBienvenida div.a3 {
+  margin-top: -20px;
+  text-align: right;
+}
+#mssBienvenida div.a1,
+#mssBienvenida div .a2,
+#mssBienvenida div .a3 {
+  visibility: hidden;
+}*/
+#index {
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  position: absolute;
+  z-index: 100;
+}

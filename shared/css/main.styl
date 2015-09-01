@@ -1,0 +1,161 @@
+azulClave = #3FFFE2
+azulMorado = #272361
+grisO = #2B2B2B
+
+
+// vars
+*
+  margin: 0
+  font-family: 'Lato', sans-serif
+
+html,
+body
+  width: 100%
+  height: 100%
+#body
+  -webkit-transition: all 0.5s ease-out
+  -moz-transition: all 0.5s ease-out
+  -o-transition: all 0.5s ease-out
+  transition: all 0.5s ease-out
+
+#wrapper
+  margin 0 auto
+  max-width 1280px
+  min-width 1000px
+  height 100%
+  position fixed
+  z-index 800
+
+.bg1
+  width 100%
+  height 100%
+  background #050006 url("../img/bg1.jpg") no-repeat center
+  background-size 100% 100%
+
+.bg2
+  background #050006 url("../img/bg2.jpg") no-repeat center
+  background-size 100% 100%
+
+.bg3
+  background #050006 url("../img/bg3.jpg") no-repeat center
+  background-size 100% 100%
+
+#preloader
+  position absolute
+  top -9999px
+  left -9999px
+  width 100px
+  height 100px
+  background url("../img/bg2.jpg") no-repeat center center, url("../img/bg3.jpg") no-repeat
+
+// Header
+header
+  top 20px
+  left 20px
+  width 400px
+  overflow hidden
+  position absolute
+  z-index 800
+
+#logo
+  display block
+  width 228px
+  height 90px
+  background url(../img/logoPyg.svg)no-repeat center
+  background-size contain 
+
+header nav
+  margin-top 30px
+  color white
+  width 180px
+  height 105px
+  
+  a
+    text-decoration none
+    color white
+    
+  .btn
+    border-top 1px solid white
+    width 110px
+    height 31px
+    margin-top 5px
+    font-size 18px
+    cursor pointer
+    transition all 0.3s ease-out
+    font-weight 600
+    padding 5px 5px 0 0 
+    box-sizing border-box
+    position relative
+    
+    
+    &:hover
+      border-top none
+      width auto
+      margin-left 28px
+      margin-bottom 10px
+      background azulClave
+      color azulMorado
+      font-weight 400 
+      font-size 18.5px
+      text-align right
+      text-transform uppercase
+      border-right 4px solid azulMorado
+      box-shadow 1px 1px 2px 1px rgba(0, 0, 0, .5)
+      
+      &:before
+        content ""
+        position absolute
+        top 0px
+        left -28px
+        width 28px
+        height 31px
+        background url(../img/navBtnBefore.png)no-repeat center
+        
+#showcaser 
+  width 100%
+  height 100%
+  overflow hidden
+  position absolute
+  z-index 100
+  
+#mssBienvenida
+  margin 0 auto
+  width 513px
+  left 0
+  right 0
+  overflow hidden
+  color azulClave
+  font-size 170px
+  position absolute
+  
+  div
+    display block
+    line-height 1
+    padding-bottom 5px 
+    position relative
+    text-shadow 1px 1px 10px rgba(0,0,0,0.5)
+  
+    &.a1, &.a3
+      color white
+      font-size 55px
+      font-weight 300
+      text-shadow 1px 1px 5px rgba(0,0,0,0.5)
+    
+    &.a2
+      margin-top -25px
+      margin-left -10px
+    &.a3
+      margin-top -20px
+      text-align right
+    &.a1, .a2, .a3
+      visibility hidden
+      
+// secciones--------------
+
+#index 
+  top 100%
+  width 100%
+  height 100%
+  background red
+  position absolute
+  z-index 100
