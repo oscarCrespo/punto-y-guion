@@ -100,7 +100,41 @@
 
 // var objProject1 = {"project":{"id":7108451,"name":"Promo Grand Summer Sale \u00b412","published_on":1360620780,"created_on":1360619811,"modified_on":1360620780,"url":"https:\/\/www.behance.net\/gallery\/7108451\/Promo-Grand-Summer-Sale-12","privacy":"public","fields":["Branding","Creative Direction","Motion Graphics"],"covers":{"404":"https:\/\/m1.behance.net\/rendition\/projects\/7108451\/404\/f55573de75126136c840db8d827a3dde.jpg","202":"https:\/\/m1.behance.net\/rendition\/projects\/7108451\/orig\/f55573de75126136c840db8d827a3dde.jpg","230":"https:\/\/m1.behance.net\/rendition\/projects\/7108451\/230\/f55573de75126136c840db8d827a3dde.jpg","115":"https:\/\/m1.behance.net\/rendition\/projects\/7108451\/115\/f55573de75126136c840db8d827a3dde.jpg"},"mature_content":0,"mature_access":"allowed","owners":[{"id":863177,"first_name":"Oscar","last_name":"Crespo","username":"puntoyguion","city":"Mexico City","state":"","country":"Mexico","location":"Mexico City, Mexico","company":"Punto & Guion","occupation":"Creative Director","created_on":1326689035,"url":"https:\/\/www.behance.net\/puntoyguion","images":{"50":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/50\/863177.53b137abb4100.jpg","100":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/100\/863177.53b137abb4100.jpg","115":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/115\/863177.53b137abb4100.jpg","230":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/230\/863177.53b137abb4100.jpg","138":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/138\/863177.53b137abb4100.jpg","276":"https:\/\/mir-cdn.behance.net\/v1\/rendition\/user\/276\/863177.53b137abb4100.jpg"},"display_name":"Oscar Crespo","fields":["Branding","Motion Graphics","Illustration"]}],"stats":{"views":116,"appreciations":3,"comments":0},"for_sale":0,"tags":["video"],"description":"Video para la campa\u00f1a de fin de temporada, publicada en tiendas Sears y Redes  sociales. Habana Home","modules":[{"id":54551735,"type":"text","text":"<div><span style=\"font-size:19px;\"><span style=\"font-family:trebuchet ms,helvetica,sans-serif;\">Video Promocional | Grand Summer Sale &acute;12&nbsp;<\/span><\/span><\/div>\n\n<div>Direcci&oacute;n, Producci&oacute;n, Animaci&oacute;n y Audio.&nbsp;<\/div>\n\n<div>&nbsp;<\/div>\n\n<div>Campa&ntilde;a de fin de Temporada para la marca Habana Home publicada en tiendas Sears y Redes Sociales.<\/div>\n","text_plain":"Video Promocional | Grand Summer Sale &acute;12&nbsp;\n\nDirecci&oacute;n, Producci&oacute;n, Animaci&oacute;n y Audio.&nbsp;\n\n&nbsp;\n\nCampa&ntilde;a de fin de Temporada para la marca Habana Home publicada en tiendas Sears y Redes Sociales.\n"},{"id":54551733,"type":"embed","width":600,"height":309,"original_width":"1200","original_height":"617","embed":"<iframe src=\"https:\/\/player.vimeo.com\/video\/59385230?byline=0\" width=\"600\" height=\"309\" frameborder=\"0\" webkitallowfullscreen=\"\" mozallowfullscreen=\"\" allowfullscreen=\"\" style=\"z-index: 0; margin: 0px auto; display: block; height: 309px; width: 600px;\"><\/iframe>"},{"id":54551737,"type":"image","src":"https:\/\/m1.behance.net\/rendition\/modules\/54551737\/disp\/16024b88087facf6cc13457b66ed5646.png","width":600,"height":309,"sizes":{"original":"https:\/\/m1.behance.net\/rendition\/modules\/54551737\/orig\/16024b88087facf6cc13457b66ed5646.png","max_1240":"https:\/\/m1.behance.net\/rendition\/modules\/54551737\/hd\/16024b88087facf6cc13457b66ed5646.png","max_1920":"https:\/\/m1.behance.net\/rendition\/modules\/54551737\/fs\/16024b88087facf6cc13457b66ed5646.png"}},{"id":54551743,"type":"image","src":"https:\/\/m1.behance.net\/rendition\/modules\/54551743\/disp\/4bee63381e5351a51543dc93295ec5a8.jpg","width":600,"height":309,"sizes":{"original":"https:\/\/m1.behance.net\/rendition\/modules\/54551743\/orig\/4bee63381e5351a51543dc93295ec5a8.jpg","max_1240":"https:\/\/m1.behance.net\/rendition\/modules\/54551743\/hd\/4bee63381e5351a51543dc93295ec5a8.jpg","max_1920":"https:\/\/m1.behance.net\/rendition\/modules\/54551743\/fs\/4bee63381e5351a51543dc93295ec5a8.jpg"}},{"id":54551739,"type":"image","src":"https:\/\/m1.behance.net\/rendition\/modules\/54551739\/disp\/cb5858ddd573f311adce445ef71b6054.png","width":600,"height":309,"sizes":{"original":"https:\/\/m1.behance.net\/rendition\/modules\/54551739\/orig\/cb5858ddd573f311adce445ef71b6054.png","max_1240":"https:\/\/m1.behance.net\/rendition\/modules\/54551739\/hd\/cb5858ddd573f311adce445ef71b6054.png","max_1920":"https:\/\/m1.behance.net\/rendition\/modules\/54551739\/fs\/cb5858ddd573f311adce445ef71b6054.png"}},{"id":54551741,"type":"image","src":"https:\/\/m1.behance.net\/rendition\/modules\/54551741\/disp\/748d6631466788825050a6c1f35291db.png","width":600,"height":309,"sizes":{"original":"https:\/\/m1.behance.net\/rendition\/modules\/54551741\/orig\/748d6631466788825050a6c1f35291db.png","max_1240":"https:\/\/m1.behance.net\/rendition\/modules\/54551741\/hd\/748d6631466788825050a6c1f35291db.png","max_1920":"https:\/\/m1.behance.net\/rendition\/modules\/54551741\/fs\/748d6631466788825050a6c1f35291db.png"}}],"short_url":"http:\/\/bit.ly\/Y5mKdf","copyright":{"license":"cc by-nc-nd","description":"Attribution-NonCommercial-NoDerivs","license_id":1},"styles":{"text":{"title":{"font_family":"arial,helvetica,sans-serif","font_weight":"bold","color":"#3B3B3B","text_align":"left","line_height":"1.4em","font_size":"16px","text_decoration":"none","font_style":"normal","display":"inline"},"subtitle":{"font_family":"arial,helvetica,sans-serif","font_weight":"normal","color":"#3B3B3B","text_align":"left","line_height":"1.4em","font_size":"14px","text_decoration":"none","font_style":"normal","display":"inline"},"paragraph":{"font_family":"arial,helvetica,sans-serif","font_weight":"normal","color":"#3B3B3B","text_align":"left","line_height":"1.4em","font_size":"12px","text_decoration":"none","font_style":"normal","display":"inline"},"caption":{"font_family":"arial,helvetica,sans-serif","font_weight":"normal","color":"#3B3B3B","text_align":"left","line_height":"1.4em","font_size":"11px","text_decoration":"none","font_style":"italic","display":"block"},"link":{"font_family":"arial,helvetica,sans-serif","font_weight":"normal","color":"#1769FF","text_align":"left","line_height":"1.4em","font_size":"12px","text_decoration":"none","font_style":"normal","display":"inline"}},"background":{"color":"FFFFFF"},"spacing":{"project":{"top_margin":38},"modules":{"bottom_margin":43}},"dividers":{"font_size":"1px","line_height":"1px","height":"1px","border_color":"#9F9F9F","margin":"-1px auto 0","position":"relative","top":"50%","border_width":"1px 0px 0px 0px","border_style":"dashed"}}},"http_code":200};
 
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
 var tituloHome=(function(){
 	var objTitulos=[
 		{"t1": "Combinando", "t2": "tecnologia y diseño", "t3": "con pasion"},
@@ -143,3 +177,72 @@ var tituloHome=(function(){
 	}
 	
 })();
+
+// blur en background
+// backdrop-filter: blur(10px)
+var scrollPercentage;
+$(window).scroll(function(){
+
+	var scrollTop=$(this).scrollTop();
+	var altoTotal=$(window).height();
+	scrollPercentage=100*(scrollTop/altoTotal);
+	//console.log( scrollPercentage );
+	// if (scrollTop<=800) {
+	// 	scrollDown();
+	// };
+	//mueveSombra();
+});
+function mueveSombra(){
+	var operador=(7*(scrollPercentage*0.01)*2)+1;
+	var contador=Math.round(operador * 10) / 10
+	
+	var sombra="inset 0 "+contador+"px "+contador+"px rgba(0,0,0,0.7)";
+	$("#index").css("box-shadow",sombra)
+	console.log( sombra);
+
+}
+
+
+// SCROLL disable
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+}
+
+function scrollDown(){
+	disableScroll();
+	$(window).scrollTop($(window).height());
+	enableScroll();
+}

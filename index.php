@@ -39,6 +39,7 @@
 			
 		
 		<section id="index"></section>
+		<section id="index2"></section>
 		
 		
 	</body>

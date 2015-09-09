@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"obj",
+				"objTitulos"
+			],
+			[
+				"suma",
+				"sumaUno"
+			],
+			[
+				"padi",
+				"padding-top"
+			],
+			[
 				"slide",
 				"slideActual"
 			],
@@ -23,7 +35,23 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1575,
+				"buffer_size": 1316,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shared/css/main.css",
+			"settings":
+			{
+				"buffer_size": 2820,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "shared/js/main.js",
+			"settings":
+			{
+				"buffer_size": 29594,
 				"line_ending": "Windows"
 			}
 		}
@@ -65,7 +93,10 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/oscarCrespo"
+		"/C/wamp/www/oscarCrespo",
+		"/C/wamp/www/oscarCrespo/shared",
+		"/C/wamp/www/oscarCrespo/shared/img",
+		"/C/wamp/www/oscarCrespo/shared/js"
 	],
 	"file_history":
 	[
@@ -85,7 +116,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
@@ -99,6 +130,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this",
+			"anima",
+			"renderea",
+			"var",
+			"1"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -116,7 +152,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -125,15 +161,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1575,
+						"buffer_size": 1316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								632,
-								632
+								736,
+								736
 							]
 						],
 						"settings":
@@ -145,6 +181,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "shared/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1638,
+								1638
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 798.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "shared/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29563,
+								29545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1448.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
 				}
@@ -153,7 +248,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -190,7 +285,7 @@
 	"project": "puntoyguion.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -199,6 +294,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"main",
+				"shared\\css\\main.css"
+			],
 			[
 				"acer",
 				"acercaDe.php"

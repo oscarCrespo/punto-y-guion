@@ -48,18 +48,18 @@ header {
   left: 20px;
   width: 400px;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   z-index: 800;
 }
 #logo {
   display: block;
-  width: 228px;
+  width: 175px;
   height: 90px;
   background: url("../img/logoPyg.svg") no-repeat center;
   background-size: contain;
 }
 header nav {
-  margin-top: 60px;
+  margin-top: 27px;
   color: #fff;
   width: 180px;
   height: 105px;
@@ -81,6 +81,12 @@ header nav a {
   padding: 5px 5px 0 0;
   box-sizing: border-box;
   position: relative;
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+     -ms-transform: translateZ(0);
+     -o-transform: translateZ(0);
+     transform: translateZ(0);
+     /* Other transform properties here */
 }
 .btn span{
   transition: all 0.15s cubic-bezier(0.31, -0.06, 0.1, 1.55);
@@ -148,7 +154,21 @@ width: 150px;
   top: 100%;
   width: 100%;
   height: 100%;
-  background: #f00;
-  position: absolute;
+  background: url(../img/philly.jpg) no-repeat center;
+  background-size: 100% 100%;  
+  background-attachment: fixed;
+  position: relative;
   z-index: 100;
+  box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
+}
+#index2{
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background: url(../img/bg2.jpg) no-repeat center;
+  background-size: 100% 100%;  
+  /*background-attachment: fixed;*/
+  position: relative;
+  z-index: 100;
+  box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
 }
