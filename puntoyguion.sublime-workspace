@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"scro",
+				"scrollTop	.scrollTop()"
+			],
+			[
+				"wi",
+				"window"
+			],
+			[
+				"disa",
+				"disableScroll"
+			],
+			[
+				"scrol",
+				"scrollTop	.scrollTop()"
+			],
+			[
+				"scroll",
+				"scrollPercentage"
+			],
+			[
 				"obj",
 				"objTitulos"
 			],
@@ -35,7 +55,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1316,
+				"buffer_size": 1350,
 				"line_ending": "Windows"
 			}
 		},
@@ -43,7 +63,7 @@
 			"file": "shared/css/main.css",
 			"settings":
 			{
-				"buffer_size": 2820,
+				"buffer_size": 3435,
 				"line_ending": "Windows"
 			}
 		},
@@ -51,7 +71,7 @@
 			"file": "shared/js/main.js",
 			"settings":
 			{
-				"buffer_size": 29594,
+				"buffer_size": 32418,
 				"line_ending": "Windows"
 			}
 		}
@@ -116,7 +136,7 @@
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -130,6 +150,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"index",
 			"this",
 			"anima",
 			"renderea",
@@ -161,15 +182,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1316,
+						"buffer_size": 1350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								736,
-								736
+								1315,
+								1315
 							]
 						],
 						"settings":
@@ -177,11 +198,11 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": -0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -190,15 +211,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2820,
+						"buffer_size": 3435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1638,
-								1638
+								3387,
+								3387
 							]
 						],
 						"settings":
@@ -208,10 +229,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 798.0,
+						"translation.y": 1170.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -220,15 +241,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29594,
+						"buffer_size": 32418,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								29563,
-								29545
+								31831,
+								31831
 							]
 						],
 						"settings":
@@ -237,7 +258,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1448.0,
+						"translation.y": 2917.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -308,9 +329,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "de",
+		"last_filter": "ci",
 		"selected_items":
 		[
+			[
+				"ci",
+				"C:\\wamp\\www\\DOV-CDI\\Codigo\\CDI.sublime-project"
+			],
 			[
 				"de",
 				"C:\\wamp\\www\\AdrianBravo-DelArte\\delarte.sublime-project"
