@@ -248,8 +248,8 @@
 						"selection":
 						[
 							[
-								31831,
-								31831
+								30568,
+								30568
 							]
 						],
 						"settings":
@@ -258,7 +258,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2917.0,
+						"translation.y": 2197.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -329,9 +329,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "ci",
+		"last_filter": "ed",
 		"selected_items":
 		[
+			[
+				"ed",
+				"C:\\wamp\\www\\DOV-EducacionFinanciera\\Documentacion\\educacionFinanciera.sublime-project"
+			],
 			[
 				"ci",
 				"C:\\wamp\\www\\DOV-CDI\\Codigo\\CDI.sublime-project"

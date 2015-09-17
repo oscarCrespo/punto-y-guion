@@ -102,147 +102,170 @@
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-}
+// function preventDefault(e) {
+//   e = e || window.event;
+//   if (e.preventDefault)
+//       e.preventDefault();
+//   e.returnValue = false;  
+// }
 
-function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
-}
+// function preventDefaultForScrollKeys(e) {
+//     if (keys[e.keyCode]) {
+//         preventDefault(e);
+//         return false;
+//     }
+// }
 
-function disableScroll() {
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
-}
+// function disableScroll() {
+//   if (window.addEventListener) // older FF
+//       window.addEventListener('DOMMouseScroll', preventDefault, false);
+//   window.onwheel = preventDefault; // modern standard
+//   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+//   window.ontouchmove  = preventDefault; // mobile
+//   document.onkeydown  = preventDefaultForScrollKeys;
+// }
 
-function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
-}
-var tituloHome=(function(){
-	var objTitulos=[
-		{"t1": "Combinando", "t2": "tecnologia y diseño", "t3": "con pasion"},
-		{"t1": "Desarrollando", "t2": "sitios web", "t3": "increibles"},
-		{"t1": "Creando", "t2": "experiencias", "t3": "memorables"},
-		{"t1": "Produciendo", "t2": "proyectos", "t3": "enfocados al usuario"},
-		{"t1": "Experimentando", "t2": "y aprendiendo", "t3": "en todo momento"}
-	]
-	var tituloActual=0;
-	function cacheaItems () {
-		var $t1= $(".a1");
-		var $t2= $(".a2");
-		var $t3= $(".a3");
-		pintaTitulo();
-	}
-	function pintaTitulo () {
-		$t1.html(objTitulos[tituloActual].t1);
-		$t2.html(objTitulos[tituloActual].t2);
-		$t3.html(objTitulos[tituloActual].t3);
-		anima();
-	}
-	function anima(){
-		// var tl=new TimelineMax({});
-		// 		tl.staggerFrom(arrItems,1,{css:{opacity:0, left:-10,}, ease:Expo.easeOut},.5);
-		// }
-	}
-	function evalua(){
-		if (tituloActual>=objTitulos.length) {
-			sumaUno();
-		}else{
-			tituloActual=0;
+// function enableScroll() {
+//     if (window.removeEventListener)
+//         window.removeEventListener('DOMMouseScroll', preventDefault, false);
+//     window.onmousewheel = document.onmousewheel = null; 
+//     window.onwheel = null; 
+//     window.ontouchmove = null;  
+//     document.onkeydown = null;  
+// }
+smoothScroll.init();
+(function(){
+	var tituloHome={
+		objTitulos:[
+			{"t1": "Combinando", "t2": "tecnología y diseño", "t3": "con pasión"},
+			{"t1": "Desarrollando", "t2": "sitios de internet", "t3": "memorables"},
+			{"t1": "Creando", "t2": "experiencias VR", "t3": "increibles"},
+			{"t1": "Experimentando", "t2": "con posibilidades", "t3": "ilimitadas"}
+		],
+		tituloActual: 0,
+		tl: new TimelineMax(),
+		centraVertical: function() {
+			var container=document.getElementById("mssBienvenida");
+			var winH=$("#showcaser").height();
+			container.style.top=(winH/2)-(container.offsetHeight/2)+40+"px";
+		},
+		cacheaItems: function () {
+			this.$t1=$("#a1");
+			this.$t2=$("#a2");
+			this.$t3=$("#a3");
+			this.$wrapper=$("#mssBienvenida");
+			this.$show=$("#showcaser");
+			this.grupo=[this.$t1, this.$t2, this.$t3];
+		},
+		pintaTitulo: function () {
+			//console.log(this.objTitulos[this.tituloActual].t1))
+			this.$t1.html(this.objTitulos[this.tituloActual].t1).attr("style","");
+			this.$t2.html(this.objTitulos[this.tituloActual].t2).attr("style","");
+			this.$t3.html(this.objTitulos[this.tituloActual].t3).attr("style","");
+			this.anima();
+		},
+		anima: function (){	
+			    this.tl.set(this.$wrapper, {transformStyle:"preserve-3d", perspective:400, scale:0.9,  transformOrigin:"50% 0%" })
+				.set(this.grupo, {transformStyle:"preserve-3d", opacity:0,  z:-1000,  transformOrigin:"50% 0%"})
+				.staggerTo(this.grupo,0.7, {css:{ opacity: 1,  z:0,  transformOrigin:"50% 0%"}, ease:Expo.easeOut}, 0.1, "+=0.5")
+				.to(this.$wrapper, 4, {css:{scale:1,  transformOrigin:"50% 0%"}}, "-=0.5")
+				.staggerTo(this.grupo,0.7, {css:{ opacity: 0,  z:-1000,  transformOrigin:"50% 0%"}, ease:Expo.easeInOut}, 0.05)
+				// .set(this.grupo, {opacity:0, y:0})
+				// .to(this.$show ,1.3,{css:{"background-position-x":(this.$show.width())+"px"}, ease:Expo.easeOut},"-=0.2")
+				// .set(this.$show, {"background-position-x":-(this.$show.width())+"px"})
+				// .to(this.$show ,1,{css:{transformOrigin:"0% 0%", "background-position-x":0}, ease:Expo.easeIn},"+=0.1")
+				.set(this.$wrapper, {transformStyle:"preserve-3d", perspective:200, scale:0.9,})
+				.call(this.evalua.bind(this))
+				.timeScale(1);
+		},
+		evalua: function (){
+			if (this.tituloActual < this.objTitulos.length-1) {
+				this.sumaUno();
+			}else{
+				this.tituloActual=0;
+			}
+			this.pintaTitulo();
+			console.log(this.tituloActual);
+		},
+		sumaUno: function (){
+			this.tituloActual++;
+			this.pintaTitulo();
+		},
+		init: function  () {
+			this.centraVertical();
+			this.cacheaItems();
+			this.pintaTitulo();
 		}
-		pintaTitulo();
-	}
-	function sumaUno(){
-		tituloActual++;
-	}
-	return {
-		suma:sumaUno
-	}
-	
-})();
-
+	};
+	tituloHome.init();
+})()
 // blur en background
 // backdrop-filter: blur(10px)
-var scrollPercentage;
-$(window).scroll(function(){
+// var scrollPercentage;
+// $(window).scroll(function(){
 
-	var scrollTop=$(this).scrollTop();
-	var altoTotal=$(window).height();
-	scrollPercentage=100*(scrollTop/altoTotal);
-	//console.log( scrollPercentage );
-	// if (scrollTop<=800) {
-	// 	scrollDown();
-	// };
-	//mueveSombra();
-});
-function mueveSombra(){
-	var operador=(7*(scrollPercentage*0.01)*2)+1;
-	var contador=Math.round(operador * 10) / 10
+// 	var scrollTop=$(this).scrollTop();
+// 	var altoTotal=$(window).height();
+// 	scrollPercentage=100*(scrollTop/altoTotal);
+// 	console.log( scrollPercentage );
+// 	// if (scrollTop<=800) {
+// 	// 	scrollDown();
+// 	// };
+// 	//mueveSombra();
+// });
+// function mueveSombra(){
+// 	var operador=(7*(scrollPercentage*0.01)*2)+1;
+// 	var contador=Math.round(operador * 10) / 10
 	
-	var sombra="inset 0 "+contador+"px "+contador+"px rgba(0,0,0,0.7)";
-	$("#index").css("box-shadow",sombra)
-	console.log( sombra);
+// 	var sombra="inset 0 "+contador+"px "+contador+"px rgba(0,0,0,0.7)";
+// 	$("#index").css("box-shadow",sombra)
+// 	console.log( sombra);
 
-}
+// }
 
 
-// SCROLL disable
+// // SCROLL disable
 
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+// // left: 37, up: 38, right: 39, down: 40,
+// // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+// var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-}
+// function preventDefault(e) {
+//   e = e || window.event;
+//   if (e.preventDefault)
+//       e.preventDefault();
+//   e.returnValue = false;  
+// }
 
-function preventDefaultForScrollKeys(e) {
-    if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-    }
-}
+// function preventDefaultForScrollKeys(e) {
+//     if (keys[e.keyCode]) {
+//         preventDefault(e);
+//         return false;
+//     }
+// }
 
-function disableScroll() {
-  if (window.addEventListener) // older FF
-      window.addEventListener('DOMMouseScroll', preventDefault, false);
-  window.onwheel = preventDefault; // modern standard
-  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-  window.ontouchmove  = preventDefault; // mobile
-  document.onkeydown  = preventDefaultForScrollKeys;
-}
+// function disableScroll() {
+//   if (window.addEventListener) // older FF
+//       window.addEventListener('DOMMouseScroll', preventDefault, false);
+//   window.onwheel = preventDefault; // modern standard
+//   window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+//   window.ontouchmove  = preventDefault; // mobile
+//   document.onkeydown  = preventDefaultForScrollKeys;
+// }
 
-function enableScroll() {
-    if (window.removeEventListener)
-        window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.onmousewheel = document.onmousewheel = null; 
-    window.onwheel = null; 
-    window.ontouchmove = null;  
-    document.onkeydown = null;  
-}
+// function enableScroll() {
+//     if (window.removeEventListener)
+//         window.removeEventListener('DOMMouseScroll', preventDefault, false);
+//     window.onmousewheel = document.onmousewheel = null; 
+//     window.onwheel = null; 
+//     window.ontouchmove = null;  
+//     document.onkeydown = null;  
+// }
 
-function scrollDown(){
-	disableScroll();
-	$(window).scrollTop($(window).height());
-	enableScroll();
-}
+// function scrollDown(){
+// 	disableScroll();
+// 	$(window).scrollTop($(window).height());
+// 	enableScroll();
+// }

@@ -110,47 +110,24 @@ width: 150px;
   height: 100%;
   overflow: hidden;
   position: absolute;
-  z-index: 100;
+  z-index: 400;
+  transform-style: preserve-3d;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+  background: url("../img/bg3.jpg") no-repeat center;
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
 }
 #mssBienvenida {
   margin: 0 auto;
-  width: 50%;
+  width: 700px;
   text-align: center;
   left: 0;
   right: 0;
- /* overflow: hidden;*/
   color: #3fffe2;
   font-size: 20px;
   position: absolute;
 }
-#mssBienvenida div {
-  display: block;
-  line-height: 1;
-  padding-bottom: 5px;
-  position: relative;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-}
-/*#mssBienvenida div.a1,
-#mssBienvenida div.a3 {
-  color: #fff;
-  font-size: 55px;
-  font-weight: 300;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-}
-#mssBienvenida div.a2 {
-  margin-top: -25px;
-  margin-left: -10px;
-}
-#mssBienvenida div.a3 {
-  margin-top: -20px;
-  text-align: right;
-}
-#mssBienvenida div.a1,
-#mssBienvenida div .a2,
-#mssBienvenida div .a3 {
-  visibility: hidden;
-}*/
-#index {
+#sec2 {
   top: 100%;
   width: 100%;
   height: 100%;
@@ -161,14 +138,95 @@ width: 150px;
   z-index: 100;
   box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
 }
-#index2{
+#bgvid{
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.7;
+}
+#sec3{
   top: 100%;
   width: 100%;
   height: 100%;
-  background: url(../img/bg2.jpg) no-repeat center;
+  background: url(../img/bg1.jpg) no-repeat center;
   background-size: 100% 100%;  
   /*background-attachment: fixed;*/
   position: relative;
   z-index: 100;
   box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
+}
+#a1,#a2,#a3{
+  color: #fff;
+  font-size: 40px;
+  font-weight: 300;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  position: relative;
+  opacity: 0;
+  line-height: 35px;
+  -webkit-background-blend-mode: multiply;
+}
+#a2{
+  font-size: 70px;
+  color: #8ED5FF;
+  font-weight: 600;
+  line-height: 55px;
+}
+#a1{
+  text-align: left;
+}
+#a2{
+  text-align: left;
+  padding-left: 90px;
+}
+#a3{
+  text-align: right;
+}
+.contactoWrapper{
+  float: right;
+  margin-top: 25%;
+  padding-right: 3%;
+  text-align: left;
+}
+.contactoWrapper a{
+  color: white;
+  text-decoration: none;
+}
+.contactoWrapper a:hover{
+  text-decoration: underline;
+}
+h2{
+  color: white;
+  font-weight: 100;
+   font-size: 60px;
+   margin-left: -10px;
+   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+   transition: all 0.5s cubic-bezier(0.31,-0.06, 0.04, 0.94);
+}
+.contactoWrapper:hover h2{
+   color: #BEF8FF;
+   text-shadow: 0px 0px 12px rgba(76, 243, 227, 0.8);
+}
+.contactoWrapper .campo{
+  margin: 10px 0;
+  font-weight: 400;
+}
+.contactoWrapper .campo span{
+  padding-right: 5px;
+}
+.contactoWrapper .campo strong{
+  font-weight: inherit;
+}
+.telIcon{
+  background: url(../img/whatsapp.png) no-repeat center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
 }
