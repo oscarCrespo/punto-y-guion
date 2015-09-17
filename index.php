@@ -30,7 +30,7 @@
 	</header>
 	<section id="sec2">
 		<video autoplay loop muted id="bgvid" width="100%">
-		    <source src="shared/video/out-b.mp4" type="video/mp4">
+		    <source src="shared/video/videoMiddle.mp4" type="video/mp4">
 		</video>
 	</section>
 	<section id="sec3">
