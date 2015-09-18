@@ -135,7 +135,10 @@
 //     window.ontouchmove = null;  
 //     document.onkeydown = null;  
 // }
-smoothScroll.init();
+smoothScroll.init({
+	"speed": 700,
+	"easing": "easeInOutCubic"
+});
 (function(){
 	var tituloHome={
 		objTitulos:[

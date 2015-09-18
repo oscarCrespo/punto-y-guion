@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"scro",
-				"scrollTop	.scrollTop()"
+				"sec",
+				"sec3"
 			],
 			[
 				"wi",
-				"window"
+				"width	.width()"
+			],
+			[
+				"show",
+				"showcaser	(index.php)"
+			],
+			[
+				"titulo",
+				"tituloHome"
+			],
+			[
+				"scro",
+				"scrollTop	.scrollTop()"
 			],
 			[
 				"disa",
@@ -55,7 +67,7 @@
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1350,
+				"buffer_size": 1746,
 				"line_ending": "Windows"
 			}
 		},
@@ -63,7 +75,7 @@
 			"file": "shared/css/main.css",
 			"settings":
 			{
-				"buffer_size": 3435,
+				"buffer_size": 4590,
 				"line_ending": "Windows"
 			}
 		},
@@ -71,7 +83,7 @@
 			"file": "shared/js/main.js",
 			"settings":
 			{
-				"buffer_size": 32418,
+				"buffer_size": 34269,
 				"line_ending": "Windows"
 			}
 		}
@@ -150,6 +162,27 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"100",
+			"#index",
+			"index",
+			"center",
+			"100",
+			"this.tl",
+			"rotationX",
+			"100",
+			"-40",
+			"50",
+			"rotateX",
+			"verticalCenter",
+			"arrItems",
+			"pintaTitulo",
+			"Creando",
+			"this",
+			"$t1",
+			".a",
+			".",
+			"class",
+			"var ",
 			"index",
 			"this",
 			"anima",
@@ -173,7 +206,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -182,15 +215,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1350,
+						"buffer_size": 1746,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1315,
-								1315
+								783,
+								783
 							]
 						],
 						"settings":
@@ -198,11 +231,11 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
-						"translation.y": 225.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -211,15 +244,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3435,
+						"buffer_size": 4590,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3387,
-								3387
+								3800,
+								3800
 							]
 						],
 						"settings":
@@ -229,7 +262,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1170.0,
+						"translation.y": 2748.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -241,27 +274,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 32418,
+						"buffer_size": 34269,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								30568,
-								30568
+								29695,
+								29695
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2197.0,
+						"translation.y": 3936.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -367,7 +401,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":

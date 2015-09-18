@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Punto & Guion</title>
+	<link rel="icon" type="image/ico" href="favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="shared/css/main.css">
@@ -13,9 +14,9 @@
 <body id="body" >
 	<div id="showcaser" >
 		<div id="mssBienvenida">
-				<div id="a1">Creando</div>
-				<div id="a2">experiencias</div>
-				<div id="a3">maravillosas</div>
+				<div id="a1">Punto & Guion</div>
+				<div id="a2">Estudio</div>
+				<div id="a3">Creativo</div>
 		</div>
 	</div>
 	<header>
@@ -23,7 +24,7 @@
 
 		<nav>
 			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Portafolio</span></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Portafolio</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
 			<a data-scroll href="#sec3"><div class="btn" ><span>Contacto</span></div></a>
 		</nav>
 
