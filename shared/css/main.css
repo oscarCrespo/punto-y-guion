@@ -115,7 +115,7 @@ width: 150px;
   box-shadow: 0 5px 5px rgba(0,0,0,0.7);
   background: url("../img/bg3.jpg") no-repeat center;
   background-size: 100% 100%;
-  background-blend-mode: multiply;
+  /*background-blend-mode: multiply;*/
 }
 #mssBienvenida {
   margin: 0 auto;

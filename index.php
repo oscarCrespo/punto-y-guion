@@ -5,11 +5,14 @@
 	<title>Punto & Guion</title>
 	<link rel="icon" type="image/ico" href="favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="shared/css/main.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="shared/js/xspMin-1.2.js"></script>
 	<script src="shared/js/smooth-scroll.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="shared/js/portfolio.js"></script>
 </head>
 <body id="body" >
 	<div id="showcaser" >
