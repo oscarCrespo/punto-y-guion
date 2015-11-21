@@ -38,7 +38,7 @@
 // 	objeto.style.top=(winH/2)-(objeto.offsetHeight/2)+40+"px";
 // }
 
-// //anima Showcaser item
+// //anima home item
 // function animaIn (contenedor, modo) {
 // 	// if (modo)== "iDi"{
 
@@ -144,14 +144,14 @@ smoothScroll.init({
 		objTitulos:[
 			{"t1": "Combinando", "t2": "tecnología y diseño", "t3": "con pasión"},
 			{"t1": "Desarrollando", "t2": "sitios de internet", "t3": "memorables"},
-			{"t1": "Creando", "t2": "experiencias VR", "t3": "increibles"},
+			{"t1": "Creando", "t2": "experiencias VR", "t3": "increíbles"},
 			{"t1": "Experimentando", "t2": "con posibilidades", "t3": "ilimitadas"}
 		],
 		tituloActual: 0,
 		tl: new TimelineMax(),
 		centraVertical: function() {
 			var container=document.getElementById("mssBienvenida");
-			var winH=$("#showcaser").height();
+			var winH=$("#home").height();
 			container.style.top=(winH/2)-(container.offsetHeight/2)+40+"px";
 		},
 		cacheaItems: function () {
@@ -159,7 +159,7 @@ smoothScroll.init({
 			this.$t2=$("#a2");
 			this.$t3=$("#a3");
 			this.$wrapper=$("#mssBienvenida");
-			this.$show=$("#showcaser");
+			this.$show=$("#home");
 			this.grupo=[this.$t1, this.$t2, this.$t3];
 		},
 		pintaTitulo: function () {

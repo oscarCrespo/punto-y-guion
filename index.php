@@ -15,7 +15,7 @@
 	<script src="shared/js/portfolio.js"></script>
 </head>
 <body id="body" >
-	<div id="showcaser" >
+	<div id="home" >
 		<div id="mssBienvenida">
 				<div id="a1">Punto & Guion</div>
 				<div id="a2">Estudio</div>
@@ -23,21 +23,22 @@
 		</div>
 	</div>
 	<header>
-		<a data-scroll href="#showcaser"><h1 id="logo"></h1></a>
+		<a data-scroll href="#home"><h1 id="logo"></h1></a>
 
 		<nav>
-			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Portafolio</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
-			<a data-scroll href="#sec3"><div class="btn" ><span>Contacto</span></div></a>
+			<a href=""><div class="btn"><span>About</span></div></a>
+			<a href=""><div class="btn"><span>Projects</span></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
+			<a data-scroll href="#contacto"><div class="btn" ><span>Contacto</span></div></a>
 		</nav>
 
 	</header>
-	<section id="sec2">
+	<section id="video">
 		<video autoplay loop muted id="bgvid" width="100%">
 		    <source src="shared/video/videoMiddle.mp4" type="video/mp4">
 		</video>
 	</section>
-	<section id="sec3">
+	<section id="contacto">
 		<div class="contactoWrapper">
 			<h2>Contacto</h2>
 			<a href="tel:+525538807201"><div class="campo"><span>T. </span><strong> 55 3880 7201</strong></div></a>
