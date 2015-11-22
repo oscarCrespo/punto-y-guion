@@ -35,14 +35,14 @@ body {
   background: #050006 url("../img/bg3.jpg") no-repeat center;
   background-size: 100% 100%;
 }
-#preloader {
+/*#preloader {
   position: absolute;
   top: -9999px;
   left: -9999px;
   width: 100px;
   height: 100px;
   background: url("../img/bg2.jpg") no-repeat center center, url("../img/bg3.jpg") no-repeat;
-}
+}*/
 header {
   top: 20px;
   left: 20px;
@@ -233,3 +233,13 @@ h2{
   height: 40px;
   display: inline-block;
 }
+/*_____________________________________________________________PROJECTS ZONE*/
+
+section#projects{
+  width: 100%;  
+  height: 100%; 
+  background: url(../img/bg2.jpg) no-repeat top;;
+  position: relative;
+  z-index: 200;
+}
+

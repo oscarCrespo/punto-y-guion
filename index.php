@@ -26,10 +26,10 @@
 		<a data-scroll href="#home"><h1 id="logo"></h1></a>
 
 		<nav>
-			<a href=""><div class="btn"><span>About</span></div></a>
-			<a href=""><div class="btn"><span>Projects</span></div></a>
+			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
+			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
 			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
-			<a data-scroll href="#contacto"><div class="btn" ><span>Contacto</span></div></a>
+			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
 		</nav>
 
 	</header>
@@ -37,6 +37,13 @@
 		<video autoplay loop muted id="bgvid" width="100%">
 		    <source src="shared/video/videoMiddle.mp4" type="video/mp4">
 		</video>
+	</section>
+	<section id="projects">
+		<div id="itemsWrapper">
+			<div class="item">
+				<img src="" alt="">
+			</div>
+		</div>
 	</section>
 	<section id="contacto">
 		<div class="contactoWrapper">
