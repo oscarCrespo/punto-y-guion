@@ -272,3 +272,24 @@ smoothScroll.init({
 // 	$(window).scrollTop($(window).height());
 // 	enableScroll();
 // }
+
+/*************************************************************************
+*************************************************************************
+
+
+---------------------------- LINKS PROJECTS ----------------------------
+
+http://www.ciudaddelasideas.com/acercaDe.php
+http://www.ciudaddelasideas.com/giftedcitizen/
+http://www.aprendeycrece.com.mx/
+https://www.ninshionline.com/
+http://taner.com.mx/index.php
+http://www.agenciai.mx/index.php
+http://www.aramark.com.mx/index.php
+http://mabakerandchef.com/index.php#lang=en
+
+---------------------------------- * ----------------------------------
+
+
+*************************************************************************
+*************************************************************************/

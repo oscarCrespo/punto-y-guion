@@ -41,7 +41,7 @@
 	<section id="projects">
 		<div id="itemsWrapper">
 			<div class="item">
-				<img src="" alt="">
+				<img src="shared/img/projects/ciudadDeLasIdeas.jpg" alt="">
 			</div>
 		</div>
 	</section>
