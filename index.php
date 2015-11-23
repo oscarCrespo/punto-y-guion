@@ -252,7 +252,7 @@
 	</section>
 	<section id="contacto">
 		<div class="contactoWrapper">
-			<h2>Contacto</h2>
+			<h2>Contact</h2>
 			<a href="tel:+525538807201"><div class="campo"><span>T. </span><strong> 55 3880 7201</strong></div></a>
 			<a href="mailto:hola@puntoyguion.com"><div class="campo"><span>M. </span><strong> hola@puntoyguion.com</strong></div></a>
 		</div>
