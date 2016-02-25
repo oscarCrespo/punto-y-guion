@@ -4,52 +4,120 @@
 		"selected_items":
 		[
 			[
-				"sec",
-				"sec3"
+				"key",
+				"keypress	.keypress()"
 			],
 			[
-				"wi",
-				"width	.width()"
+				"remove",
+				"removeClass	.removeClass()"
 			],
 			[
-				"show",
-				"showcaser	(index.php)"
+				"pop",
+				"popContent"
 			],
 			[
-				"titulo",
-				"tituloHome"
+				"close",
+				"closePop"
 			],
 			[
-				"scro",
-				"scrollTop	.scrollTop()"
-			],
-			[
-				"disa",
-				"disableScroll"
-			],
-			[
-				"scrol",
-				"scrollTop	.scrollTop()"
+				"t",
+				"top"
 			],
 			[
 				"scroll",
-				"scrollPercentage"
+				"scrollTop	.scrollTop()"
 			],
 			[
-				"obj",
-				"objTitulos"
+				"scro",
+				"scrollListener"
 			],
 			[
-				"suma",
-				"sumaUno"
+				"fix",
+				"fixedBar"
 			],
 			[
-				"padi",
-				"padding-top"
+				"tarjeta",
+				"tarjetaBase"
 			],
 			[
-				"slide",
-				"slideActual"
+				"visa",
+				"visa_master"
+			],
+			[
+				"ls",
+				"list-s	list-style-type: square;"
+			],
+			[
+				"brose",
+				"browserSync"
+			],
+			[
+				"browser",
+				"browser-sync"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"grunt",
+				"grunt-contrib-watch"
+			],
+			[
+				"trans",
+				"translate()"
+			],
+			[
+				"mensa",
+				"mensajeOgl"
+			],
+			[
+				"submit",
+				"submitCorreo"
+			],
+			[
+				"inpu",
+				"inputActual"
+			],
+			[
+				"input",
+				"inputsZone"
+			],
+			[
+				"pass",
+				"passwordDuplicado"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"sub",
+				"submit	.submit()"
+			],
+			[
+				"submi",
+				"submitNews"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bor",
+				"border-right"
+			],
+			[
+				"obras",
+				"obrasSimilares"
 			],
 			[
 				"borde",
@@ -64,10 +132,18 @@
 	"buffers":
 	[
 		{
+			"file": "shared/js/main.js",
+			"settings":
+			{
+				"buffer_size": 35002,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 1889,
+				"buffer_size": 10319,
 				"line_ending": "Windows"
 			}
 		},
@@ -75,35 +151,7 @@
 			"file": "shared/css/main.css",
 			"settings":
 			{
-				"buffer_size": 4594,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "shared/js/main.js",
-			"settings":
-			{
-				"buffer_size": 34269,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "var port;\n// function Portfolio($scope, $http) {\n//     $http.get('http://www.behance.net/v2/users/puntoyguion/projects?api_key=ou7brZchU1j4Ig5gvkl2rsz8e2r5hX72').\n//         success(function(data) {\n//             $scope.portfolio = data;\n//             console.log(data)\n//             port=data;\n//         });\n// }\n// function a(){\n// 	console.log(\"se llamo\")\n// 	$.ajax({\n// 	  url: \"shared/js/port.json\",\n// 	  context: document.body\n// 	}).done(function(r) {\n// 	   port=r;\n// 	});\n// }\n// a();\n\nfunction PortfolioCtrl($scope, $http) {\n    	$scope.portfolioItems=[];\n\n        $http({\n          method: 'GET',\n          url: 'http://rest-service.guides.spring.io/greeting'\n        }).then(function successCallback(response) {\n            $scope.portfolioItems=response;\n            console.log(\"se cumplio\"+response)\n          })\n}\n",
-			"file": "shared/js/portfolio.js",
-			"file_size": 869,
-			"file_write_time": 130896847808415897,
-			"settings":
-			{
-				"buffer_size": 838,
-				"line_ending": "Windows",
-				"name": "function Hello($scope, $http) {"
-			}
-		},
-		{
-			"file": "/C/wamp/www/DOV-CDI/Codigo/shared/js/acercaDe.js",
-			"settings":
-			{
-				"buffer_size": 1129,
+				"buffer_size": 9088,
 				"line_ending": "Windows"
 			}
 		}
@@ -115,16 +163,88 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 81.0,
-		"last_filter": "insta",
+		"height": 178.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
+				"Package Control: disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enab",
+				"Package Control: Enable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Debug Mode"
+			],
+			[
+				"jsh",
+				"JSHint"
+			],
+			[
+				"pac",
+				"Preferences: Package Control Settings – User"
+			],
+			[
 				"insta",
 				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"grunt",
+				"Set Syntax: Gruntfile JS"
+			],
+			[
+				"ints",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"pc",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"set sy p",
+				"Set Syntax: PHP"
+			],
+			[
+				"emm",
+				"Set Syntax: Emmet"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
 			]
 		],
-		"width": 400.0
+		"width": 520.0
 	},
 	"console":
 	{
@@ -145,39 +265,113 @@
 	},
 	"expanded_folders":
 	[
-		"/C/wamp/www/oscarCrespo",
-		"/C/wamp/www/oscarCrespo/shared",
-		"/C/wamp/www/oscarCrespo/shared/img",
-		"/C/wamp/www/oscarCrespo/shared/js"
+		"/C/wamp/www/punto-y-guion",
+		"/C/wamp/www/punto-y-guion/shared",
+		"/C/wamp/www/punto-y-guion/shared/css"
 	],
 	"file_history":
 	[
-		"/C/wamp/www/oscarCrespo/shared/js/port.json",
-		"/C/wamp/www/oscarCrespo/shared/js/ngTest.php",
-		"/C/wamp/www/oscarCrespo/shared/js/projectsJson",
-		"/C/wamp/www/DOV-CDI/Codigo/shared/js/acercaDe.js",
+		"/C/Users/Oscar/Desktop/hosts",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/main.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/pagos.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/carrito.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/confirmacion.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/partials/menu.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/partials/filtros.phtml",
+		"/C/Users/Oscar/.ssh/id_rsa.pub",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/partials/headerLogged.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/partials/header.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/login.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/js/main.js",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/footer.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/registro.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/login.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/templates/default.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/admin/js/main.js",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/js/backend.js",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/wamp/www/gitTest/readme.txt",
+		"/C/Users/Oscar/.ssh/config",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/cms/login.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/package.json",
+		"/C/wamp/www/Taner/main.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/gulpfile.js",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/Gruntfile.js",
+		"/C/wamp/www/my-project/Gruntfile.js",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/index.php",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/index.php",
+		"/C/wamp/www/my-project/package.json",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/web.config",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/.htaccess",
+		"/C/Users/Oscar/Downloads/index.php",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/.live-server.json",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/.htaccess",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/index.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/artistas/galeria.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/checkout.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/admin/css/main.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/recuperaContrasena.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/checkout/enviarContrasena.phtml",
+		"/C/wamp/www/oscarCrespo/shared/js/main.js",
+		"/C/wamp/www/oscarCrespo/index.php",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/artistas/obra.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/controllers/checkout_controller.php",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/clientes.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/galeria.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/terminos.phtml",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/configurador.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/precio.css",
+		"/C/Users/Oscar/Desktop/index.html",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/artistas/configurar.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/compra/resumen.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/compra/datos.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/_shared/partials/footer.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/js/configurador.js",
+		"/C/Users/Oscar/Desktop/snake/game.js",
+		"/C/wamp/www/MAE/index.php",
+		"/C/Users/Oscar/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/public/shared/js/main.js",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/public/shared/css/main.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/app/views/artistas/index.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/app/views/artistas/galeria.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/app/views/_shared/partials/header.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/app/views/_shared/partials/menu.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/public/shared/css/artistaInt.css",
+		"/C/wamp/www/AdrianBravo-DelArte/Codigo/artistaInt.php",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/public/shared/css/listadoArtistas.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSiteBeta/default/app/views/_shared/partials/headerLogged.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/contacto.css",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/contacto.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/app/views/index/delarte.phtml",
+		"/C/wamp/www/AdrianBravo-DelArte/DelArteMxSite/default/public/shared/css/clientes.css",
+		"/C/wamp/www/AdrianBravo-DelArte/Documentacion/README.txt",
+		"/C/wamp/www/AdrianBravo-DelArte/Codigo/shared/js/configurador.js",
+		"/C/wamp/www/AdrianBravo-DelArte/Codigo/shared/css/main.css",
+		"/C/wamp/www/AdrianBravo-DelArte/Codigo/galeria.php",
 		"/C/wamp/www/DOV-CDI/Codigo/shared/css/acercaDe.css",
 		"/C/wamp/www/DOV-CDI/Codigo/shared/css/main.css",
-		"/C/wamp/www/DOV-CDI/Codigo/shared/includes/head.php",
-		"/C/wamp/www/DOV-CDI/Codigo/index.php",
-		"/C/wamp/www/index.php",
-		"/C/wamp/www/GBC/trunk/servicios.php",
-		"/C/wamp/www/DOV-CDI/Codigo/acercaDe.php",
-		"/C/wamp/www/hemisferioFinanciero/trunk/README.md",
 		"/C/wamp/www/DOV-CDI/Codigo/shared/includes/header.php",
+		"/C/wamp/www/DOV-CDI/Codigo/shared/includes/head.php",
+		"/C/wamp/www/DOV-CDI/Codigo/acercaDe.php",
+		"/C/wamp/www/DOV-CDI/Codigo/index.php",
 		"/C/Windows/System32/drivers/etc/hosts",
-		"/C/Users/Oscar/Desktop/hosts",
 		"/C/wamp/www/GBC/trunk/preguntasFrecuentes.php"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"<open folders>"
 		]
 	},
 	"find_state":
@@ -185,33 +379,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"100",
-			"#index",
-			"index",
+			"tag",
+			"border-right",
+			"tarjeta",
+			"card",
+			"zonagaler",
+			"zonafil",
+			"gray",
+			"filtros",
+			"estilo",
+			"closeFilter",
+			"57",
+			"10",
+			"11",
+			"  float: left;",
+			"170px",
+			"estilo ul",
+			"ul{",
+			"#estilo",
+			"estilo{",
+			"#artista",
+			"selecc",
+			"53",
+			"barraf",
+			"zonaFiltr",
+			"barrafiltr",
+			"titulo",
+			"attr",
+			"this",
+			"onclick",
+			"sibling",
+			"closest",
+			"parent",
+			"text",
+			"html",
+			"btnDetalles",
+			"detalles",
+			">\n",
+			"\">\n",
+			"popCOntent",
+			"aviso",
+			"h6",
+			"h5",
+			"10p",
+			"20px",
+			"4",
+			"form",
+			"ctrl+shift+a",
+			"180deg",
+			"tarjeta",
+			"reqi",
+			"divisor",
+			"$()",
+			"pagoTienda",
+			"numero_tarjeta",
+			"nombre_tarjeta",
+			"placeholder=\"*Nombre del titular de la tarjeta\"",
+			"png",
+			"7",
+			"inpLog",
+			"text",
+			"twice",
+			"activo",
+			"default",
+			"<input class=\"inpLog\" type=\"text\" placeholder=\"*RFC\" name=\"rfc\"></input>",
+			"twice",
+			"11px",
+			"misDir",
+			"h4",
+			"titulo",
+			"placeholder=\"1\"",
+			"div",
+			"btnAcci",
+			"rename",
+			"php",
+			"js",
+			"transform",
+			"h3",
+			"rightCol",
+			"0",
+			"black",
+			"producto",
+			"autor",
+			" ;",
+			"titulo",
+			"titulo_nota",
+			"class=\"datos\"",
+			"productShot",
+			".titulo",
+			"pasword",
+			"alert",
+			">",
+			"valor",
+			"console.log(valor.indexOf(\"@\"))",
+			"lanzaError",
+			"2",
+			"btn_submit",
+			"Nombre",
+			"20",
+			"obraT",
+			"div",
+			"datosObra",
+			"transition-delay: 0.1s;\n}",
+			".precio",
+			"precio",
+			"pokemon",
+			" width: 38px;\n    height: 39px;",
+			"background",
 			"center",
-			"100",
-			"this.tl",
-			"rotationX",
-			"100",
-			"-40",
-			"50",
-			"rotateX",
-			"verticalCenter",
-			"arrItems",
-			"pintaTitulo",
-			"Creando",
-			"this",
-			"$t1",
-			".a",
-			".",
-			"class",
-			"var ",
-			"index",
-			"this",
-			"anima",
-			"renderea",
-			"var",
-			"1"
+			"hp",
+			"transition",
+			"obraOri",
+			"nombreAuto",
+			"costoHide",
+			"dashed",
+			"25",
+			"ease|linear|ease-in|ease-out|ease-in-out|cubic-bezier(<number>,<number>,<number>,<number>)",
+			"obrasSimilares",
+			"i]",
+			"[i]",
+			"blocked",
+			"bloqueado",
+			"BARRAFIL",
+			"cuadr",
+			"obra",
+			"0px 0px 3px 1px rgba(0,0,0,0.0)",
+			"1px",
+			"0px 0px 7px rgba(0,0,0,0.9)",
+			"10"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -229,151 +524,94 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1889,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1499,
-								1499
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "shared/css/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2437,
-								2437
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1398.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "shared/js/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34269,
+						"buffer_size": 35002,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2827,
-								21770
+								34572,
+								34526
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 3276.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "shared/js/portfolio.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								677,
-								677
-							]
-						],
-						"settings":
-						{
-							"auto_name": "function Hello($scope, $http) {",
+							"apply_syntax_touched": true,
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3412.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "/C/wamp/www/DOV-CDI/Codigo/shared/js/acercaDe.js",
+					"buffer": 1,
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1129,
+						"buffer_size": 10319,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								976,
+								976
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"apply_syntax_touched": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
+						"translation.x": -0.0,
+						"translation.y": 342.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "shared/css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9088,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8771,
+								8771
+							]
+						],
+						"settings":
+						{
+							"apply_syntax_touched": true,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7286.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -384,11 +622,11 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 23.0
 	},
 	"layout":
 	{
@@ -413,6 +651,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 86.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -421,7 +663,7 @@
 	"project": "puntoyguion.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -432,7 +674,75 @@
 		[
 			[
 				"main",
-				"shared\\css\\main.css"
+				"shared\\js\\main.js"
+			],
+			[
+				"filtr",
+				"default\\app\\views\\_shared\\partials\\filtros.phtml"
+			],
+			[
+				"menu",
+				"default\\app\\views\\_shared\\partials\\menu.phtml"
+			],
+			[
+				"registro",
+				"default\\app\\views\\checkout\\registro.phtml"
+			],
+			[
+				"login",
+				"default\\public\\shared\\css\\login.css"
+			],
+			[
+				"logi",
+				"default\\app\\views\\checkout\\login.phtml"
+			],
+			[
+				"live",
+				".live-server-json"
+			],
+			[
+				"header",
+				"default\\app\\views\\_shared\\partials\\header.phtml"
+			],
+			[
+				"configu",
+				"default\\public\\shared\\js\\configurador.js"
+			],
+			[
+				"confi",
+				"default\\public\\shared\\css\\configurador.css"
+			],
+			[
+				"footer",
+				"default\\app\\views\\_shared\\partials\\footer.phtml"
+			],
+			[
+				"foote",
+				"default\\public\\shared\\css\\footer.css"
+			],
+			[
+				"obra",
+				"default\\app\\views\\artistas\\obra.phtml"
+			],
+			[
+				"prec",
+				"default\\public\\shared\\css\\precio.css"
+			],
+			[
+				"artistai",
+				"Codigo\\artistaInt.php"
+			],
+			[
+				"read",
+				"Documentacion\\README.txt"
+			],
+			[
+				"g",
+				"Codigo\\galeria.php"
+			],
+			[
+				"conf",
+				"Codigo\\shared\\js\\configurador.js"
 			],
 			[
 				"acer",
@@ -444,24 +754,52 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "delar",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"delar",
+				"",
+				"C:\\wamp\\www\\molecula\\molecula.sublime-project"
+			],
+			[
+				"habe",
+				"C:\\wamp\\www\\projectsWorkspace\\habemusCurriculum.sublime-project"
+			],
+			[
+				"dela",
 				"C:\\wamp\\www\\AdrianBravo-DelArte\\delarte.sublime-project"
 			],
 			[
-				"ed",
-				"C:\\wamp\\www\\DOV-EducacionFinanciera\\Documentacion\\educacionFinanciera.sublime-project"
+				"adr",
+				"C:\\wamp\\www\\AdrianBravo-DelArte\\delarte.sublime-project"
 			],
 			[
-				"ci",
+				"punt",
+				"C:\\wamp\\www\\oscarCrespo\\puntoyguion.sublime-workspace"
+			],
+			[
+				"pun",
+				"C:\\wamp\\www\\oscarCrespo\\puntoyguion.sublime-workspace"
+			],
+			[
+				"osca",
+				"C:\\wamp\\www\\oscarCrespo\\puntoyguion.sublime-project"
+			],
+			[
+				"mae",
+				"C:\\wamp\\www\\MAE\\mae.sublime-project"
+			],
+			[
+				"cherrs",
+				"C:\\wamp\\www\\cherryBakery\\cherry15.sublime-project"
+			],
+			[
+				"CHERR",
+				"C:\\wamp\\www\\cherryBakery\\cherry15.sublime-project"
+			],
+			[
+				"cdi",
 				"C:\\wamp\\www\\DOV-CDI\\Codigo\\CDI.sublime-project"
-			],
-			[
-				"de",
-				"C:\\wamp\\www\\AdrianBravo-DelArte\\delarte.sublime-project"
 			],
 			[
 				"cd",
@@ -483,11 +821,11 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 150.0,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
