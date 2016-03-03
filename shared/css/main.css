@@ -51,6 +51,26 @@ header {
   position: fixed;
   z-index: 800;
 }
+#loader{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: white url(../img/loading.gif) no-repeat center;
+}
+header{
+  top: 10px;
+  opacity: 0;
+  -webkit-transition-delay: opacity 2s; 
+  transition-delay: opacity 2s;
+  transition: opacity 1s ease-out;
+}
+.ready header{
+  top: 20px;
+  opacity: 1;
+}
 #logo {
   display: block;
   width: 175px;
@@ -117,15 +137,21 @@ width: 150px;
   background-size: 100% 100%;
   /*background-blend-mode: multiply;*/
 }
-#mssBienvenida {
-  margin: 0 auto;
-  width: 700px;
-  text-align: center;
-  left: 0;
-  right: 0;
-  color: #3fffe2;
-  font-size: 20px;
+.main-background{
+  width: 100%;
+  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+#bgSequence{
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0); 
 }
 #video {
   top: 100%;

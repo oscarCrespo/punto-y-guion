@@ -2,88 +2,67 @@ smoothScroll.init({
 	"speed": 700,
 	"easing": "easeInOutCubic"
 });
-(function(){
-	var tituloHome={
-		objTitulos:[
-			{"t1": "Combining", "t2": "technology and design", "t3": "with passion"},
-			{"t1": "Developing", "t2": "custom web solutions focused", "t3": "on the user"},
-			{"t1": "Experimenting", "t2": "with astonishing VR experiences ", "t3": "for fun"}
-		],
-		tituloActual: 0,
-		tl: new TimelineMax(),
-		centraVertical: function() {
-			var container=document.getElementById("mssBienvenida");
-			var winH=$("#home").height();
-			container.style.top=(winH/2)-(container.offsetHeight/2)+40+"px";
-		},
-		cacheaItems: function () {
-			this.$t1=$("#a1");
-			this.$t2=$("#a2");
-			this.$t3=$("#a3");
-			this.$wrapper=$("#mssBienvenida");
-			this.$show=$("#home");
-			this.grupo=[this.$t1, this.$t2, this.$t3];
-		},
-		pintaTitulo: function () {
-			//console.log(this.objTitulos[this.tituloActual].t1))
-			this.$t1.html(this.objTitulos[this.tituloActual].t1).attr("style","");
-			this.$t2.html(this.objTitulos[this.tituloActual].t2).attr("style","");
-			this.$t3.html(this.objTitulos[this.tituloActual].t3).attr("style","");
-			this.anima();
-		},
-		anima: function (){	
-			    this.tl.set(this.$wrapper, {transformStyle:"preserve-3d", perspective:400, scale:0.9,  transformOrigin:"50% 0%" })
-				.set(this.grupo, {transformStyle:"preserve-3d", opacity:0,  z:-1000,  transformOrigin:"50% 0%"})
-				.staggerTo(this.grupo,0.7, {css:{ opacity: 1,  z:0,  transformOrigin:"50% 0%"}, ease:Expo.easeOut}, 0.1, "+=0.5")
-				.to(this.$wrapper, 4, {css:{scale:1,  transformOrigin:"50% 0%"}}, "-=0.5")
-				.staggerTo(this.grupo,0.7, {css:{ opacity: 0,  z:-1000,  transformOrigin:"50% 0%"}, ease:Expo.easeInOut}, 0.05)
-				// .set(this.grupo, {opacity:0, y:0})
-				// .to(this.$show ,1.3,{css:{"background-position-x":(this.$show.width())+"px"}, ease:Expo.easeOut},"-=0.2")
-				// .set(this.$show, {"background-position-x":-(this.$show.width())+"px"})
-				// .to(this.$show ,1,{css:{transformOrigin:"0% 0%", "background-position-x":0}, ease:Expo.easeIn},"+=0.1")
-				.set(this.$wrapper, {transformStyle:"preserve-3d", perspective:200, scale:0.9,})
-				.call(this.evalua.bind(this))
-				.timeScale(1);
-		},
-		evalua: function (){
-			if (this.tituloActual < this.objTitulos.length-1) {
-				this.sumaUno();
-			}else{
-				this.tituloActual=0;
-			}
-			this.pintaTitulo();
-			console.log(this.tituloActual);
-		},
-		sumaUno: function (){
-			this.tituloActual++;
-			this.pintaTitulo();
-		},
-		init: function  () {
-			this.centraVertical();
-			this.cacheaItems();
-			this.pintaTitulo();
+
+
+(function($){
+
+	var $img = $("#bgSequence");
+
+	function updateImg() {
+		var newNumber;
+		if( counter <= frames-1 && forward){
+			newNumber = pad(counter++, 4);
+			if (counter == frames-1) forward=false;
+		}else if(counter < frames && !forward ) {
+			newNumber = pad(counter--, 4);
+			if (counter == 0) forward=true;
 		}
-	};
-	tituloHome.init();
-})()
+		console.log( counter );
+		var newImg = prefix + newNumber + ".jpg";
+		$img.attr("src", newImg);
+	}
+
+	$(document).mousemove(function(event){
+	  var xPercent = (event.pageX / $(document).width()) * 100;
+	  var normalizedNum = Math.floor(xPercent * 0.79);
+	  //console.log(normalizedNum);
+	  counter = normalizedNum ;
+	  updateImg()
+	})
+
+
+})(jQuery)
+
+
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     var img = document.getElementById('bgSequence');
+//     var canvas = document.getElementById('c');
+//     var context = canvas.getContext('2d');
+//     var btn = getElementById("cambiar");
+
+//     var cw = 1280;
+//     var ch = 720;
+//     canvas.width = cw;
+//     canvas.height = ch;
+
+//     btn.addEventListener('click', function(){
+//         draw(img,context,cw,ch);
+//     },false);
+
+// },false);
+
+// function draw(img,c,w,h) {
+//     //if(v.paused || v.ended) return false;
+//     c.drawImage(v,0,0,w,h);
+//     setTimeout(draw,20,v,c,w,h);
+// }
 
 
 /*************************************************************************
 *************************************************************************
 
 
----------------------------- LINKS PROJECTS ----------------------------
-
-http://www.ciudaddelasideas.com/acercaDe.php
-http://www.ciudaddelasideas.com/giftedcitizen/
-http://www.aprendeycrece.com.mx/
-https://www.ninshionline.com/
-http://taner.com.mx/index.php
-http://www.agenciai.mx/index.php
-http://www.aramark.com.mx/index.php
-http://mabakerandchef.com/index.php#lang=en
-
----------------------------------- * ----------------------------------
 
 
 *************************************************************************
