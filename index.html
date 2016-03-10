@@ -6,48 +6,51 @@
 	<link rel="icon" type="image/ico" href="favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="shared/css/main.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="shared/js/smooth-scroll.js"></script>
-	<script>
-
-		var counter = 0;
-		var forward = true;
-		var frames = 80;
-		var prefix = 'shared/img/bgSequence/VideoPYG';
-		var imageList = [];
-		
-		for (var i = 0 ; i <= frames; i++) {
-			var src = prefix+ pad(i, 4) + '.jpg';
-			imageList.push(src);
-		}
-		function pad(n, width, z) {
-		  z = z || '0';
-		  n = n + '';
-		  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-		}
-		function preloadImages(){
-		    for(var i = 0; i < imageList.length; i++ ){
-		        var imageObject = new Image();
-		        imageObject.src = imageList[i];
-		        console.log(imageList[i]);
-		    }
-		    document.getElementById("loader").style.display="none";
-		    document.getElementById("body").className = "ready";
-		}
-	</script>
+	
 </head>
+<script>
+	var globalVars = {
+		prefix : 'shared/img/bgSequence/VideoPYG',
+		imageList : [],
+		counter : 80,
+		forward : false,
+		frames : 80,
+		reverseOnce : true
+	};
+
+
+	function pad(n, width, z) {
+	  z = z || '0';
+	  n = n + '';
+	  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+	}
+
+	for (var i = 0 ; i <= globalVars.frames; i++) {
+		var src = globalVars.prefix + pad(i, 4) + '.jpg';
+		globalVars.imageList.push( src );
+	}
+
+	function preloadImages(){
+
+	    for(var i = 0; i < globalVars.imageList.length; i++ ){
+	        var imageObject = new Image();
+	        imageObject.src = globalVars.imageList[i];
+	        console.log(globalVars.imageList[i]);
+	    }
+	    document.getElementById("loader").style.display="none";
+	    document.getElementById("body").className = "ready";
+	}
+</script>
 <body id="body" class="loading" onload="preloadImages()">
-	<div id="loader">
-		
-	</div>
+	<div id="loader"></div>
 	<div id="home">
 		<div class="main-background">
-			<img id="bgSequence" src="shared/img/bgSequence/VideoPYG0000.jpg" alt="Punto & Guion | Oscar Crespo">
+			<img id="bgSequence" src="shared/img/bgSequence/VideoPYG0080.jpg" alt="Punto & Guion | Oscar Crespo">
 		</div>	
 		<div id="homeButtons">
-			<h2 class="fieldsTitle design">Design</h2>
-			<h2 class="fieldsTitle interaction">Interaction</h2>
+			<h2 class="fieldsTitle design" id="designBtn">Design <span>+</span></h2>
+			<h2 class="fieldsTitle interaction" id="interactionBtn">Interaction</h2>
+			<!-- <button class="landingAction">take a look</button> -->
 		</div>
 	</div>
 	<header>
@@ -56,7 +59,8 @@
 		<nav>
 			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
 			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="20" alt=""></div></a>
+			<a href="https://github.com/oscarCrespo" target="_blank"><div class="btn" ><span>GitHub</span> <img src="shared/img/github-circle.png" width="13" alt=""></div></a>
 			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
 		</nav>
 
@@ -286,7 +290,12 @@
 		</div>
 
 	</section>
-	
+	<!-- scripts -->
+	<script src="shared/js/smooth-scroll.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="shared/js/main.js"></script>
+	<!-- scripts -->
 </body>
+
 </html>	
