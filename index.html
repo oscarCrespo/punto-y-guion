@@ -15,7 +15,8 @@
 		counter : 80,
 		forward : false,
 		frames : 80,
-		reverseOnce : true
+		reverseOnce : true,
+		animating : false
 	};
 
 
@@ -35,7 +36,6 @@
 	    for(var i = 0; i < globalVars.imageList.length; i++ ){
 	        var imageObject = new Image();
 	        imageObject.src = globalVars.imageList[i];
-	        console.log(globalVars.imageList[i]);
 	    }
 	    document.getElementById("loader").style.display="none";
 	    document.getElementById("body").className = "ready";
@@ -59,7 +59,7 @@
 		<nav>
 			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
 			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="20" alt=""></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="13" alt=""></div></a>
 			<a href="https://github.com/oscarCrespo" target="_blank"><div class="btn" ><span>GitHub</span> <img src="shared/img/github-circle.png" width="13" alt=""></div></a>
 			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
 		</nav>
@@ -284,7 +284,7 @@
 	</section>
 	<section id="contacto">
 		<div class="contactoWrapper">
-			<h2>Contact</h2>
+			<h2 class="contactTitle">Contact</h2>
 			<a href="tel:+525538807201"><div class="campo"><span>T. </span><strong> 55 3880 7201</strong></div></a>
 			<a href="mailto:hola@puntoyguion.com"><div class="campo"><span>M. </span><strong> hola@puntoyguion.com</strong></div></a>
 		</div>

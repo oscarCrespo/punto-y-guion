@@ -171,9 +171,9 @@ header nav a {
 }
 #homeButtons{
   position: absolute;
-  right: 20%;
+  left: 57%;
   top: 50%;
-  margin-top: -54px;
+  margin-top: 0;
   z-index: 500;
   line-height: 0.9;
 }
@@ -181,9 +181,18 @@ header nav a {
   font-weight: 800;
   color: white;
   font-weight: 100;
-  font-size: 60px;
-  //text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
-  transition: all 0.5s cubic-bezier(0.31,-0.06, 0.04, 0.94);
+  font-size: 80px;
+  text-shadow: -5px 5px 50px rgba(0,0,0,0.8);
+  transition: font-weight 0.3s cubic-bezier(0.31,-0.06, 0.04, 0.94);
+}
+.fieldsTitle.highlighted{
+  font-weight: 600;
+}
+#designBtn{
+  transform-origin: bottom center;
+}
+#interactionBtn{
+  transform-origin: top center;
 }
 .fieldsTitle span{
   color: #3fffe2;
@@ -208,7 +217,6 @@ header nav a {
   top: 100%;
   width: 100%;
   height: 100%;
-  background: url(../img/philly.jpg) no-repeat center;
   background-size: 100% 100%;  
   background-attachment: fixed;
   position: relative;
@@ -242,6 +250,11 @@ header nav a {
   z-index: 100;
   box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
 }
+.contactTitle{
+  font-size: 65px;
+  color: white;
+  font-weight: 100;
+}
 #a1,#a2,#a3{
   color: #fff;
   font-size: 40px;
@@ -270,9 +283,11 @@ header nav a {
 }
 .contactoWrapper{
   float: right;
-  margin-top: 25%;
-  padding-right: 3%;
+  top: 85%;
+  position: relative;
+  padding-right: 5%;
   text-align: left;
+  transform: translateY(-50%);
 }
 .contactoWrapper a{
   color: white;
@@ -295,13 +310,7 @@ header nav a {
 .contactoWrapper .campo strong{
   font-weight: inherit;
 }
-.telIcon{
-  background: url(../img/whatsapp.png) no-repeat center;
-  background-size: contain;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-}
+
 /*_____________________________________________________________PROJECTS ZONE*/
 
 section#projects{
@@ -475,5 +484,34 @@ section#projects{
 @media screen and (max-width: 1370px) {
   #projects .item{
     width: 220px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  #contacto{
+    top: 0;
+  }
+  section#projects{
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(32,34,35,1) 48%, rgba(0,0,0,1) 98%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+
+}
+@media screen and (max-width: 500px) {
+  #itemsWrapper{
+    width: 100%;
+    min-width: 100%;
+  }
+  #projects .item{
+    width: 320px;
+  }
+  #projects .item:hover {
+      width: 150px;
+      margin-right: 140px;
+      margin-bottom: 90px;
+  }
+  .item:hover .brand{
+    font-size: 20px;
   }
 }
