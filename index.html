@@ -9,129 +9,26 @@
 	
 </head>
 <script>
-	var globalVars = {
-		prefix : 'shared/img/bgSequence/VideoPYG',
-		imageList : [],
-		counter : 80,
-		forward : false,
-		frames : 80,
-		reverseOnce : true,
-		animating : false
-	};
 
-
-	function pad(n, width, z) {
-	  z = z || '0';
-	  n = n + '';
-	  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+	var images = new Array()
+	function preload() {
+		for (i = 0; i < preload.arguments.length; i++) {
+			images[i] = new Image()
+			images[i].src = preload.arguments[i]
+		}
 	}
-
-	for (var i = 0 ; i <= globalVars.frames; i++) {
-		var src = globalVars.prefix + pad(i, 4) + '.jpg';
-		globalVars.imageList.push( src );
-	}
-	var ImgHtmlWrapper = '';
-
-	function preloadImages(){
-		var frameCounter = 0;
-	    for(var i = 0; i < globalVars.imageList.length; i++ ){
-	    	if (i == globalVars.imageList.length-1) {
-				var img= '<img class="bgSequence seq'+i+' -top" src="'+globalVars.imageList[i]+'" alt="Punto & Guion | Oscar Crespo">';
-	    	}else{
-	    		var img= '<img class="bgSequence seq'+i+'" src="'+globalVars.imageList[i]+'" alt="Punto & Guion | Oscar Crespo">';
-	    	}
-	        
-	        ImgHtmlWrapper += img;
-	        frameCounter++;
-	    }
-	    document.getElementById('imgsBG').innerHTML = ImgHtmlWrapper;
-	}
+	preload(
+		"shared/img/bgDesign.jpg",
+		"shared/img/bgInteraction.jpg"
+	);
+	
 </script>
 <body id="body" class="loading" >
 	<div id="loader"></div>
 	<div id="home">
 		<div id="imgsBG" class="main-background">
-			<img src="shared/img/bgSequence/VideoPYG0000.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq0">
-			<img src="shared/img/bgSequence/VideoPYG0001.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq1">
-			<img src="shared/img/bgSequence/VideoPYG0002.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq2">
-			<img src="shared/img/bgSequence/VideoPYG0003.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq3">
-			<img src="shared/img/bgSequence/VideoPYG0004.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq4">
-			<img src="shared/img/bgSequence/VideoPYG0005.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq5">
-			<img src="shared/img/bgSequence/VideoPYG0006.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq6">
-			<img src="shared/img/bgSequence/VideoPYG0007.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq7">
-			<img src="shared/img/bgSequence/VideoPYG0008.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq8">
-			<img src="shared/img/bgSequence/VideoPYG0009.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq9">
-			<img src="shared/img/bgSequence/VideoPYG0010.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq10">
-			<img src="shared/img/bgSequence/VideoPYG0011.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq11">
-			<img src="shared/img/bgSequence/VideoPYG0012.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq12">
-			<img src="shared/img/bgSequence/VideoPYG0013.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq13">
-			<img src="shared/img/bgSequence/VideoPYG0014.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq14">
-			<img src="shared/img/bgSequence/VideoPYG0015.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq15">
-			<img src="shared/img/bgSequence/VideoPYG0016.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq16">
-			<img src="shared/img/bgSequence/VideoPYG0017.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq17">
-			<img src="shared/img/bgSequence/VideoPYG0018.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq18">
-			<img src="shared/img/bgSequence/VideoPYG0019.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq19">
-			<img src="shared/img/bgSequence/VideoPYG0020.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq20">
-			<img src="shared/img/bgSequence/VideoPYG0021.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq21">
-			<img src="shared/img/bgSequence/VideoPYG0022.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq22">
-			<img src="shared/img/bgSequence/VideoPYG0023.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq23">
-			<img src="shared/img/bgSequence/VideoPYG0024.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq24">
-			<img src="shared/img/bgSequence/VideoPYG0025.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq25">
-			<img src="shared/img/bgSequence/VideoPYG0026.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq26">
-			<img src="shared/img/bgSequence/VideoPYG0027.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq27">
-			<img src="shared/img/bgSequence/VideoPYG0028.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq28">
-			<img src="shared/img/bgSequence/VideoPYG0029.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq29">
-			<img src="shared/img/bgSequence/VideoPYG0030.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq30">
-			<img src="shared/img/bgSequence/VideoPYG0031.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq31">
-			<img src="shared/img/bgSequence/VideoPYG0032.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq32">
-			<img src="shared/img/bgSequence/VideoPYG0033.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq33">
-			<img src="shared/img/bgSequence/VideoPYG0034.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq34">
-			<img src="shared/img/bgSequence/VideoPYG0035.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq35">
-			<img src="shared/img/bgSequence/VideoPYG0036.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq36">
-			<img src="shared/img/bgSequence/VideoPYG0037.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq37">
-			<img src="shared/img/bgSequence/VideoPYG0038.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq38">
-			<img src="shared/img/bgSequence/VideoPYG0039.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq39">
-			<img src="shared/img/bgSequence/VideoPYG0040.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq40">
-			<img src="shared/img/bgSequence/VideoPYG0041.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq41">
-			<img src="shared/img/bgSequence/VideoPYG0042.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq42">
-			<img src="shared/img/bgSequence/VideoPYG0043.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq43">
-			<img src="shared/img/bgSequence/VideoPYG0044.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq44">
-			<img src="shared/img/bgSequence/VideoPYG0045.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq45">
-			<img src="shared/img/bgSequence/VideoPYG0046.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq46">
-			<img src="shared/img/bgSequence/VideoPYG0047.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq47">
-			<img src="shared/img/bgSequence/VideoPYG0048.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq48">
-			<img src="shared/img/bgSequence/VideoPYG0049.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq49">
-			<img src="shared/img/bgSequence/VideoPYG0050.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq50">
-			<img src="shared/img/bgSequence/VideoPYG0051.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq51">
-			<img src="shared/img/bgSequence/VideoPYG0052.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq52">
-			<img src="shared/img/bgSequence/VideoPYG0053.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq53">
-			<img src="shared/img/bgSequence/VideoPYG0054.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq54">
-			<img src="shared/img/bgSequence/VideoPYG0055.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq55">
-			<img src="shared/img/bgSequence/VideoPYG0056.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq56">
-			<img src="shared/img/bgSequence/VideoPYG0057.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq57">
-			<img src="shared/img/bgSequence/VideoPYG0058.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq58">
-			<img src="shared/img/bgSequence/VideoPYG0059.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq59">
-			<img src="shared/img/bgSequence/VideoPYG0060.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq60">
-			<img src="shared/img/bgSequence/VideoPYG0061.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq61">
-			<img src="shared/img/bgSequence/VideoPYG0062.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq62">
-			<img src="shared/img/bgSequence/VideoPYG0063.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq63">
-			<img src="shared/img/bgSequence/VideoPYG0064.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq64">
-			<img src="shared/img/bgSequence/VideoPYG0065.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq65">
-			<img src="shared/img/bgSequence/VideoPYG0066.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq66">
-			<img src="shared/img/bgSequence/VideoPYG0067.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq67">
-			<img src="shared/img/bgSequence/VideoPYG0068.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq68">
-			<img src="shared/img/bgSequence/VideoPYG0069.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq69">
-			<img src="shared/img/bgSequence/VideoPYG0070.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq70">
-			<img src="shared/img/bgSequence/VideoPYG0071.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq71">
-			<img src="shared/img/bgSequence/VideoPYG0072.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq72">
-			<img src="shared/img/bgSequence/VideoPYG0073.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq73">
-			<img src="shared/img/bgSequence/VideoPYG0074.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq74">
-			<img src="shared/img/bgSequence/VideoPYG0075.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq75">
-			<img src="shared/img/bgSequence/VideoPYG0076.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq76">
-			<img src="shared/img/bgSequence/VideoPYG0077.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq77">
-			<img src="shared/img/bgSequence/VideoPYG0078.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq78">
-			<img src="shared/img/bgSequence/VideoPYG0079.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq79">
-			<img src="shared/img/bgSequence/VideoPYG0080.jpg" alt="Punto & Guion | Oscar Crespo" class="bgSequence seq80 -top">
+			<img src="shared/img/bgDesign.jpg" alt="Punto & Guion | Oscar Crespo" id="bgDesign" class="bgImg  -top">
+			<img src="shared/img/bgInteraction.jpg" alt="Punto & Guion | Oscar Crespo" id="bgInteraction" class="bgImg ">
 		</div>	
 		<div id="homeButtons">
 			<h2 class="fieldsTitle design" id="designBtn">Design <span>+</span></h2>
