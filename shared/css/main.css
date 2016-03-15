@@ -51,6 +51,26 @@ header {
   position: fixed;
   z-index: 800;
 }
+#loader{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background: white url(../img/loading.gif) no-repeat center;
+}
+header{
+  top: 10px;
+  opacity: 0;
+  -webkit-transition-delay: opacity 2s; 
+  transition-delay: opacity 2s;
+  transition: opacity 1s ease-out;
+}
+.ready header{
+  top: 20px;
+  opacity: 1;
+}
 #logo {
   display: block;
   width: 175px;
@@ -81,13 +101,35 @@ header nav a {
   padding: 5px 5px 0 0;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
   -webkit-transform: translateZ(0);
      -moz-transform: translateZ(0);
-     -ms-transform: translateZ(0);
-     -o-transform: translateZ(0);
-     transform: translateZ(0);
+      -ms-transform: translateZ(0);
+       -o-transform: translateZ(0);
+          transform: translateZ(0);
      /* Other transform properties here */
 }
+.btn:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  opacity: 0;
+  background-color: rgba(255,255,255,0.9); 
+  transition: width 1.8s cubic-bezier(0, 0.42, 0, 1.02), opacity 0.05s ease-in ;
+}
+/*.btn:before{
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 0%;
+  height: 0px;
+  background-color:rgba(255,255,255,0.7); 
+  transition: all 2s cubic-bezier(0, 0.42, 0, 1.02);
+}*/
 .btn span{
   transition: all 0.15s cubic-bezier(0.31, -0.06, 0.1, 1.55);
   transition-delay: 0.05s;
@@ -102,9 +144,19 @@ header nav a {
   color: #3fffe2;
 }
 .btn:hover{
-width: 150px;
-  
+  width: 150px;  
 }
+.btn:hover:after{
+  content: "";
+  /* height: 1px; */
+  opacity: 1;
+  width: 100%;
+}
+/*.btn:hover:before{
+  content: "";
+  height: 1px;
+  width: 100%;
+}*/
 #home{
   width: 100%;
   height: 100%;
@@ -117,21 +169,61 @@ width: 150px;
   background-size: 100% 100%;
   /*background-blend-mode: multiply;*/
 }
-#mssBienvenida {
-  margin: 0 auto;
-  width: 700px;
-  text-align: center;
-  left: 0;
-  right: 0;
-  color: #3fffe2;
-  font-size: 20px;
+#homeButtons{
   position: absolute;
+  right: 5%;
+  bottom: 5%;
+  margin-top: 0;
+  z-index: 500;
+  line-height: 0.9;
+}
+.fieldsTitle{
+  font-weight: 800;
+  color: white;
+  font-weight: 100;
+  font-size: 80px;
+  text-shadow: -5px 5px 50px rgba(0,0,0,0.8);
+  transition: font-weight 0.3s cubic-bezier(0.31,-0.06, 0.04, 0.94);
+}
+.fieldsTitle.highlighted{
+  font-weight: 600;
+}
+#designBtn{
+  transform-origin: bottom center;
+}
+#interactionBtn{
+  transform-origin: top center;
+}
+.fieldsTitle span{
+  color: #3fffe2;
+}
+.main-background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.bgImg{
+  width: 1920px;
+  height: 1080px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0); 
+  z-index: 90;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.bgImg.-top{
+  z-index: 100;
+  opacity: 1;
 }
 #video {
   top: 100%;
   width: 100%;
   height: 100%;
-  background: url(../img/philly.jpg) no-repeat center;
   background-size: 100% 100%;  
   background-attachment: fixed;
   position: relative;
@@ -165,6 +257,11 @@ width: 150px;
   z-index: 100;
   box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
 }
+.contactTitle{
+  font-size: 65px;
+  color: white;
+  font-weight: 100;
+}
 #a1,#a2,#a3{
   color: #fff;
   font-size: 40px;
@@ -193,9 +290,11 @@ width: 150px;
 }
 .contactoWrapper{
   float: right;
-  margin-top: 25%;
-  padding-right: 3%;
+  top: 85%;
+  position: relative;
+  padding-right: 5%;
   text-align: left;
+  transform: translateY(-50%);
 }
 .contactoWrapper a{
   color: white;
@@ -203,14 +302,6 @@ width: 150px;
 }
 .contactoWrapper a:hover{
   text-decoration: underline;
-}
-h2{
-  color: white;
-  font-weight: 100;
-   font-size: 60px;
-   margin-left: -10px;
-   text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
-   transition: all 0.5s cubic-bezier(0.31,-0.06, 0.04, 0.94);
 }
 .contactoWrapper:hover h2{
    color: #BEF8FF;
@@ -226,13 +317,7 @@ h2{
 .contactoWrapper .campo strong{
   font-weight: inherit;
 }
-.telIcon{
-  background: url(../img/whatsapp.png) no-repeat center;
-  background-size: contain;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-}
+
 /*_____________________________________________________________PROJECTS ZONE*/
 
 section#projects{
@@ -242,6 +327,7 @@ section#projects{
   background-size: cover;
   position: relative;
   z-index: 200;
+  top: 100%;
 }
 #itemsWrapper{
   width: 80%;
@@ -406,5 +492,34 @@ section#projects{
 @media screen and (max-width: 1370px) {
   #projects .item{
     width: 220px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  #contacto{
+    top: 0;
+  }
+  section#projects{
+    background: rgb(0,0,0); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(32,34,35,1) 48%, rgba(0,0,0,1) 98%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+
+}
+@media screen and (max-width: 500px) {
+  #itemsWrapper{
+    width: 100%;
+    min-width: 100%;
+  }
+  #projects .item{
+    width: 320px;
+  }
+  #projects .item:hover {
+      width: 150px;
+      margin-right: 140px;
+      margin-bottom: 90px;
+  }
+  .item:hover .brand{
+    font-size: 20px;
   }
 }

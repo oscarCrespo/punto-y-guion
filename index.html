@@ -6,20 +6,34 @@
 	<link rel="icon" type="image/ico" href="favicon.ico">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="shared/css/main.css">
-
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="shared/js/xspMin-1.2.js"></script>
-	<script src="shared/js/smooth-scroll.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	<script src="shared/js/portfolio.js"></script>
+	
 </head>
-<body id="body" >
-	<div id="home" >
-		<div id="mssBienvenida">
-				<div id="a1">Punto & Guion</div>
-				<div id="a2">Estudio</div>
-				<div id="a3">Creativo</div>
+<script>
+
+	var images = new Array()
+	function preload() {
+		for (i = 0; i < preload.arguments.length; i++) {
+			images[i] = new Image()
+			images[i].src = preload.arguments[i]
+		}
+	}
+	preload(
+		"shared/img/bgDesign.jpg",
+		"shared/img/bgInteraction.jpg"
+	);
+	
+</script>
+<body id="body" class="loading" >
+	<div id="loader"></div>
+	<div id="home">
+		<div id="imgsBG" class="main-background">
+			<img src="shared/img/bgDesign.jpg" alt="Punto & Guion | Oscar Crespo" id="bgDesign" class="bgImg  -top">
+			<img src="shared/img/bgInteraction.jpg" alt="Punto & Guion | Oscar Crespo" id="bgInteraction" class="bgImg ">
+		</div>	
+		<div id="homeButtons">
+			<h2 class="fieldsTitle design" id="designBtn">Design <span>+</span></h2>
+			<h2 class="fieldsTitle interaction" id="interactionBtn">Interaction</h2>
+			<!-- <button class="landingAction">take a look</button> -->
 		</div>
 	</div>
 	<header>
@@ -28,16 +42,12 @@
 		<nav>
 			<!-- <a href=""><div class="btn"><span>About</span></div></a> -->
 			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="17" alt=""></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="shared/img/behance.png" width="13" alt=""></div></a>
+			<a href="https://github.com/oscarCrespo" target="_blank"><div class="btn" ><span>GitHub</span> <img src="shared/img/github-circle.png" width="13" alt=""></div></a>
 			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
 		</nav>
 
 	</header>
-	<section id="video">
-		<video autoplay loop muted id="bgvid" width="100%">
-		    <source src="shared/video/videoMiddle.mp4" type="video/mp4">
-		</video>
-	</section>
 	<section id="projects">
 		<div id="itemsWrapper">
 		<a href="http://www.aprendeycrece.com.mx/" target="_blank">
@@ -252,13 +262,18 @@
 	</section>
 	<section id="contacto">
 		<div class="contactoWrapper">
-			<h2>Contact</h2>
+			<h2 class="contactTitle">Contact</h2>
 			<a href="tel:+525538807201"><div class="campo"><span>T. </span><strong> 55 3880 7201</strong></div></a>
 			<a href="mailto:hola@puntoyguion.com"><div class="campo"><span>M. </span><strong> hola@puntoyguion.com</strong></div></a>
 		</div>
 
 	</section>
-	
+	<!-- scripts -->
+	<script src="shared/js/smooth-scroll.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 	<script src="shared/js/main.js"></script>
+	<!-- scripts -->
 </body>
+
 </html>	
