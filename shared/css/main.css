@@ -205,13 +205,17 @@ header nav a {
   left: 0;
   overflow: hidden;
 }
-#bgSequence{
+.bgSequence{
   width: 1920px;
   height: 1080px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0); 
+  z-index: 500;
+}
+.bgSequence.-top{
+  z-index: 600;
 }
 #video {
   top: 100%;
@@ -240,7 +244,7 @@ header nav a {
     opacity: 0.9;
 }
 #contacto{
-  top: 100%;
+  top: 0;
   width: 100%;
   height: 100%;
   background: url(../img/bg2.jpg) no-repeat center;

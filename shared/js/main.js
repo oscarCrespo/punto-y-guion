@@ -2,8 +2,11 @@ smoothScroll.init({
 	"speed": 700,
 	"easing": "easeInOutCubic"
 });
+document.getElementById("loader").style.display="none";
+document.getElementById("body").className = "ready";
 
-var $img = $("#bgSequence");
+var $imgContainer = $("#imgsBG");
+var $imgs = $('.bgSequence');
 var $win = $(window);
 var $tittles = $('#homeButtons');
 
@@ -43,13 +46,33 @@ function mouseMoveFunctions( x, y ) {
 	updateImg()
 }
 
+// function updateImg() {
+// 	var newNumber;
+// 	if( globalVars.counter <= globalVars.frames-1 && globalVars.forward){
+// 		newNumber = pad(globalVars.counter++, 4);
+// 		if (globalVars.counter == globalVars.frames-1) globalVars.forward = false;
+// 	}else if(globalVars.counter <= globalVars.frames && !globalVars.forward ) {
+// 		newNumber = pad(globalVars.counter--, 4);
+// 		// Reverse animation
+// 		if ( globalVars.reverseOnce && globalVars.counter == 0) {
+// 			clearInterval(interval);
+// 			globalVars.reverseOnce = false;
+// 		}
+// 		if (globalVars.counter == 0) globalVars.forward = true;
+// 	}
+// 	//console.log( globalVars.counter );
+// 	var newImg = globalVars.prefix + newNumber + ".jpg";
+// 	$img.attr("src", newImg);
+// }
+var $sequence = $('.bgSequence');
+console.log($sequence.length)
 function updateImg() {
 	var newNumber;
 	if( globalVars.counter <= globalVars.frames-1 && globalVars.forward){
-		newNumber = pad(globalVars.counter++, 4);
+		newNumber = globalVars.counter++;
 		if (globalVars.counter == globalVars.frames-1) globalVars.forward = false;
 	}else if(globalVars.counter <= globalVars.frames && !globalVars.forward ) {
-		newNumber = pad(globalVars.counter--, 4);
+		newNumber = globalVars.counter--;
 		// Reverse animation
 		if ( globalVars.reverseOnce && globalVars.counter == 0) {
 			clearInterval(interval);
@@ -58,8 +81,10 @@ function updateImg() {
 		if (globalVars.counter == 0) globalVars.forward = true;
 	}
 	//console.log( globalVars.counter );
-	var newImg = globalVars.prefix + newNumber + ".jpg";
-	$img.attr("src", newImg);
+	$sequence.removeClass('-top');
+	var targetClass = '.seq'+newNumber;
+	console.log(targetClass);
+	$imgContainer.find(targetClass).addClass("-top");
 }
 function updateText(){
 	var xReduced = Math.floor(globalVars.xPercent * -0.2) + 5;
@@ -113,7 +138,7 @@ var interval;
 
 //interval = setInterval(  updateImg , 25);
 if ($win.width()>1024) {
-	mouseMoveOn();
+mouseMoveOn();
 }
 
 
