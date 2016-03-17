@@ -1,30 +1,27 @@
-smoothScroll.init({
-	"speed": 700,
-	"easing": "easeInOutCubic"
-});
-document.getElementById("loader").style.display="none";
-document.getElementById("body").className = "ready";
-(function($){
+var pygLanding = (function($){
+
 	var $winWidth, 
 		$winHeight,
 		xPercent,
 		yPercent;
 
-
-
 	var $imgContainer = $("#imgsBG");
 	var $images = $imgContainer.find('.bgImg');
 	var $win = $(window);
 	var $tittles = $('#homeButtons');
-
 	var $design = $imgContainer.find("#bgDesign");
 	var $interaction = $imgContainer.find("#bgInteraction");
 
+
+	// window.onload = function() {
+	// 	document.getElementById("loader").style.display="none";
+	// 	document.getElementById("body").className = "ready";
+	// };
+	
 	function getDimentions() {
 		$winWidth = $win.width();
 		$winHeight = $win.height();
 	}
-	getDimentions();
 
 	window.onresize = function(){
 		getDimentions();
@@ -41,6 +38,7 @@ document.getElementById("body").className = "ready";
 	}
 
 	function mouseListener() {
+
 		xPercent = (event.pageX / $winWidth) * 100;
 		yPercent = (event.pageY / $winHeight) * 100;
 
@@ -48,12 +46,11 @@ document.getElementById("body").className = "ready";
 	}
 
 	function mouseMoveFunctions( x, y ) {
+
 		var floorX = Math.floor(x * 0.80);
 		var floorY = Math.floor(y * 0.1);
-		//console.log(x, y);
-
-		//counter = floorX ;
 		updateField();
+
 	}
 
 	//$imgContainer.find(targetClass).addClass("-top");
@@ -85,6 +82,7 @@ document.getElementById("body").className = "ready";
 		});
 	}
 
+
 	function switchLandingBg(){
 		if ($win.width()>1024) {
 			mouseMoveOn();
@@ -92,9 +90,27 @@ document.getElementById("body").className = "ready";
 			mouseMoveOff();
 		}
 	}
-	return{
-		switchLandingBg : switchLandingBg()
+
+	function init(){
+		getDimentions();
+		switchLandingBg();
+		smoothScroll.init({
+			"speed": 700,
+			"easing": "easeInOutCubic"
+		});
 	}
+
+	$(function(){
+		init();
+	});
+
+	return{
+		switchLandingBg : switchLandingBg,
+		mouseMoveOn : mouseMoveOn,
+		mouseMoveOff : mouseMoveOff 
+	}
+
+
 })(jQuery);
 
 /*************************************************************************

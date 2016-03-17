@@ -67,6 +67,9 @@ header{
   transition-delay: opacity 2s;
   transition: opacity 1s ease-out;
 }
+.loading{
+  position: fixed;
+}
 .ready header{
   top: 20px;
   opacity: 1;
@@ -91,7 +94,7 @@ header nav a {
 .btn {
   border-top: 1px solid #fff;
   width: 110px;
-  height: 31px;
+  height: 23px;
   margin-top: 3px;
   line-height: 1;
   font-size: 15px;
@@ -108,6 +111,9 @@ header nav a {
        -o-transform: translateZ(0);
           transform: translateZ(0);
      /* Other transform properties here */
+}
+.ready .btn{
+  height: 31px;
 }
 .btn:after{
   content: "";
@@ -161,7 +167,7 @@ header nav a {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   z-index: 400;
   transform-style: preserve-3d;
   box-shadow: 0 5px 5px rgba(0,0,0,0.7);
@@ -247,7 +253,6 @@ header nav a {
     opacity: 0.9;
 }
 #contacto{
-  top: 100%;
   width: 100%;
   height: 100%;
   background: url(../img/bg2.jpg) no-repeat center;
@@ -257,36 +262,10 @@ header nav a {
   z-index: 100;
   box-shadow: inset 0 7px 7px rgba(0,0,0,0.7)
 }
-.contactTitle{
+.thinTittle{
   font-size: 65px;
   color: white;
   font-weight: 100;
-}
-#a1,#a2,#a3{
-  color: #fff;
-  font-size: 40px;
-  font-weight: 300;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-  position: relative;
-  opacity: 0;
-  line-height: 35px;
-  -webkit-background-blend-mode: multiply;
-}
-#a2{
-  font-size: 70px;
-  color: #0DFFDF;
-  font-weight: 600;
-  line-height: 55px;
-}
-#a1{
-  text-align: left;
-}
-#a2{
-  text-align: left;
-  padding-left: 90px;
-}
-#a3{
-  text-align: right;
 }
 .contactoWrapper{
   float: right;
@@ -320,14 +299,24 @@ header nav a {
 
 /*_____________________________________________________________PROJECTS ZONE*/
 
-section#projects{
+#projects{
   width: 100%;  
   min-height: 100%; 
   background: url(../img/bg1.jpg) no-repeat top;
   background-size: cover;
-  position: relative;
   z-index: 200;
-  top: 100%;
+}
+#itemsWrapper > a {
+  color: transparent;
+}
+#projects .thinTittle{
+  text-align: center;
+  padding-top: 40px;
+  display: block;
+  margin: 0 auto;
+  width: 222px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #534F4F;
 }
 #itemsWrapper{
   width: 80%;
@@ -493,16 +482,27 @@ section#projects{
   #projects .item{
     width: 220px;
   }
+ 
 }
 @media screen and (max-width: 1025px) {
+  #imgsBG{
+    display: none;
+  }
+  .fieldsTitle.design{
+    font-weight: 800;
+  }
   #contacto{
     top: 0;
   }
-  section#projects{
+  #projects{
     background: rgb(0,0,0); /* Old browsers */
     background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(32,34,35,1) 48%, rgba(0,0,0,1) 98%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(32,34,35,1) 48%,rgba(0,0,0,1) 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  #itemsWrapper{
+    min-width: 500px;
+    text-align: center;
   }
 
 }

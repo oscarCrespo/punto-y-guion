@@ -21,21 +21,9 @@
 		"shared/img/bgDesign.jpg",
 		"shared/img/bgInteraction.jpg"
 	);
-	
 </script>
 <body id="body" class="loading" >
 	<div id="loader"></div>
-	<div id="home">
-		<div id="imgsBG" class="main-background">
-			<img src="shared/img/bgDesign.jpg" alt="Punto & Guion | Oscar Crespo" id="bgDesign" class="bgImg  -top">
-			<img src="shared/img/bgInteraction.jpg" alt="Punto & Guion | Oscar Crespo" id="bgInteraction" class="bgImg ">
-		</div>	
-		<div id="homeButtons">
-			<h2 class="fieldsTitle design" id="designBtn">Design <span>+</span></h2>
-			<h2 class="fieldsTitle interaction" id="interactionBtn">Interaction</h2>
-			<!-- <button class="landingAction">take a look</button> -->
-		</div>
-	</div>
 	<header>
 		<a data-scroll href="#home"><h1 id="logo"></h1></a>
 
@@ -48,7 +36,24 @@
 		</nav>
 
 	</header>
+	<section id="home">
+		<div id="imgsBG" class="main-background">
+			<img src="shared/img/bgDesign.jpg" alt="Punto & Guion | Oscar Crespo" id="bgDesign" class="bgImg  -top">
+			<img src="shared/img/bgInteraction.jpg" alt="Punto & Guion | Oscar Crespo" id="bgInteraction" class="bgImg ">
+		</div>	
+		<div id="homeButtons">
+			<h2 class="fieldsTitle design" id="designBtn">Design <span>+</span></h2>
+			<h2 class="fieldsTitle interaction" id="interactionBtn">Interaction</h2>
+			<!-- <button class="landingAction">take a look</button> -->
+		</div>
+		<script>
+			document.getElementById("loader").style.display="none";
+			document.getElementById("body").className = "ready";
+		</script>
+	</section>
+	
 	<section id="projects">
+		<h2 class="thinTittle projects">Projects</h2>
 		<div id="itemsWrapper">
 		<a href="http://www.aprendeycrece.com.mx/" target="_blank">
 				<div class="item">
@@ -262,7 +267,7 @@
 	</section>
 	<section id="contacto">
 		<div class="contactoWrapper">
-			<h2 class="contactTitle">Contact</h2>
+			<h2 class="thinTittle">Contact</h2>
 			<a href="tel:+525538807201"><div class="campo"><span>T. </span><strong> 55 3880 7201</strong></div></a>
 			<a href="mailto:hola@puntoyguion.com"><div class="campo"><span>M. </span><strong> hola@puntoyguion.com</strong></div></a>
 		</div>
