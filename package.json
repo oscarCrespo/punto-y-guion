@@ -1,0 +1,45 @@
+{
+  "name": "punto-y-guion",
+  "version": "1.0.0",
+  "description": "Front end and creative deveopment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarCrespo/punto-y-guion.git"
+  },
+  "keywords": [
+    "web",
+    "design",
+    "user",
+    "experience",
+    "frone-end",
+    "development",
+    "user",
+    "interface",
+    "3d",
+    "motion",
+    "graphics"
+  ],
+  "author": "Oscar Crespo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oscarCrespo/punto-y-guion/issues"
+  },
+  "homepage": "https://github.com/oscarCrespo/punto-y-guion#readme",
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^3.2.2",
+    "gulp-open": "^1.0.0",
+    "gulp-sass": "^2.2.0",
+    "jquery": "^2.2.3",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

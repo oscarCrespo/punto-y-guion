@@ -11,7 +11,6 @@ document.getElementById("body").className = "ready";
 		yPercent;
 
 
-
 	var $imgContainer = $("#imgsBG");
 	var $images = $imgContainer.find('.bgImg');
 	var $win = $(window);
