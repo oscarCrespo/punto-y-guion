@@ -18,6 +18,7 @@ var config = {
     html: './src/*.html',
     js: './src/**/*.js',
     scss: './src/scss/*.scss',
+    img: './src/img/**/*',
     dist: './dist',
     mainJs: './src/main.js'
   }
@@ -41,6 +42,15 @@ gulp.task('html', function(){
   gulp.src(config.paths.html)
       .pipe(gulp.dest(config.paths.dist))
       .pipe(connect.reload());
+});
+
+gulp.task('img', function(){
+  gulp.src(config.paths.img)
+      .pipe(gulp.dest(config.paths.dist + '/img'))
+      .pipe(connect.reload());
+
+  gulp.src('./src/favicon.ico')
+      .pipe(gulp.dest(config.paths.dist))
 });
 
 gulp.task('js', function(){
@@ -67,4 +77,4 @@ gulp.task('watch', function(){
   gulp.watch(config.paths.scss, ['css']);
 });
 
-gulp.task('default', ['html', 'js', 'css', 'open', 'watch']);
+gulp.task('default', ['html', 'img', 'js', 'css', 'open', 'watch']);
