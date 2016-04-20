@@ -1,4 +1,5 @@
 var smoothScroll = require('./smooth-scroll');
+var jQuery = require('jquery');
 
 smoothScroll.init({
 	"speed": 700,
@@ -6,7 +7,7 @@ smoothScroll.init({
 });
 
 (function($){
-	var $winWidth, 
+	var $winWidth,
 		$winHeight,
 		xPercent,
 		yPercent;

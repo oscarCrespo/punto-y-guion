@@ -62,6 +62,20 @@ header {
   z-index: 999;
   background: white url(../img/loading.gif) no-repeat center;
 }
+.thinTittle {
+    font-size: 65px;
+    color: white;
+    font-weight: 100;
+}
+#projects .thinTittle {
+    text-align: center;
+    padding-top: 40px;
+    display: block;
+    margin: 0 auto;
+    width: 222px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #534F4F;
+}
 header{
   top: 10px;
   opacity: 0;

@@ -4,10 +4,10 @@ var gulp = require('gulp');
 var connect = require('gulp-connect');
 var open = require('gulp-open');
 var browserify = require('browserify');
-var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
+var babelify = require('babelify');
 
 
 
@@ -55,7 +55,7 @@ gulp.task('img', function(){
 
 gulp.task('js', function(){
     browserify(config.paths.mainJs)
-      .transform(reactify)
+      .transform("babelify", {presets: ["es2015", "react"]})
       .bundle()
       .on('error', console.log.bind(console) )
       .pipe(source('bundle.js'))
