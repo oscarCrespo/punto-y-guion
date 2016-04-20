@@ -1,6 +1,7 @@
 puntoyguion.sublime-workspace
 puntoyguion.sublime-workspace
 *.sublime-workspace
+*.sublime-project
 arte/
 node_modules/
 npm-debug.log
