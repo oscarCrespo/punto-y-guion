@@ -2,3 +2,6 @@ puntoyguion.sublime-workspace
 puntoyguion.sublime-workspace
 *.sublime-workspace
 arte/
+node_modules/
+npm-debug.log
+dist/
