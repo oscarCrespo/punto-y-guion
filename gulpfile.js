@@ -77,4 +77,4 @@ gulp.task('watch', function(){
   gulp.watch(config.paths.scss, ['css']);
 });
 
-gulp.task('default', ['html', 'img', 'js', 'css', 'open', 'watch']);
+gulp.task('default', ['html', 'img', 'css', 'js', 'open', 'watch']);

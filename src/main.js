@@ -2,7 +2,14 @@ var jQuery = require('jquery');
 var React = require('react');
 var ReactDOM = require('react-dom');
 var main = require('./js/base');
+var CategorySelector = require('./components/CategorySelector');
+var ProjectsModule = require('./components/ProjectsModule');
 
-var Projects = require('./components/Projects');
-
-ReactDOM.render(<Projects />, document.getElementById('projectsApp'));
+class ProjectsApp extends React.Component {
+  render(){
+    return(
+        <ProjectsModule />
+    )
+  }
+}
+ReactDOM.render(<ProjectsApp />, document.getElementById('projectsApp'));

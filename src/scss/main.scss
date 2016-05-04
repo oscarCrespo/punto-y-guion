@@ -1,4 +1,5 @@
 $fontFamily : 'Lato', sans-serif;
+$primaryBlue : #3fffe2;
 
 * {
   margin: 0;
@@ -74,12 +75,12 @@ header {
     margin: 0 auto;
     width: 222px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #534F4F;
+
 }
 header{
   top: 10px;
   opacity: 0;
-  -webkit-transition-delay: opacity 2s; 
+  -webkit-transition-delay: opacity 2s;
   transition-delay: opacity 2s;
   transition: opacity 1s ease-out;
 }
@@ -133,7 +134,7 @@ header nav a {
   width: 0%;
   height: 1px;
   opacity: 0;
-  background-color: rgba(255,255,255,0.9); 
+  background-color: rgba(255,255,255,0.9);
   transition: width 1.8s cubic-bezier(0, 0.42, 0, 1.02), opacity 0.05s ease-in ;
 }
 /*.btn:before{
@@ -143,7 +144,7 @@ header nav a {
   left: 0;
   width: 0%;
   height: 0px;
-  background-color:rgba(255,255,255,0.7); 
+  background-color:rgba(255,255,255,0.7);
   transition: all 2s cubic-bezier(0, 0.42, 0, 1.02);
 }*/
 .btn span{
@@ -160,7 +161,7 @@ header nav a {
   color: #3fffe2;
 }
 .btn:hover{
-  width: 150px;  
+  width: 150px;
 }
 .btn:hover:after{
   content: "";
@@ -206,12 +207,21 @@ header nav a {
 }
 #designBtn{
   transform-origin: bottom center;
+  -webkit-backface-visibility: hidden;
 }
 #interactionBtn{
   transform-origin: top center;
+  -webkit-backface-visibility: hidden;
 }
-.fieldsTitle span{
+#plusSign{
   color: #3fffe2;
+  font-weight: 800;
+  font-weight: 100;
+  font-size: 80px;
+  text-shadow: -5px 5px 50px rgba(0,0,0,0.8);
+  transition: font-weight 0.3s cubic-bezier(0.31,-0.06, 0.04, 0.94);
+  transform-origin: top center;
+  -webkit-backface-visibility: hidden;
 }
 .main-background{
   width: 100%;
@@ -227,7 +237,7 @@ header nav a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0); 
+  transform: translate3d(-50%, -50%, 0);
   z-index: 90;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -240,7 +250,7 @@ header nav a {
   top: 100%;
   width: 100%;
   height: 100%;
-  background-size: 100% 100%;  
+  background-size: 100% 100%;
   background-attachment: fixed;
   position: relative;
   z-index: 100;
@@ -267,7 +277,7 @@ header nav a {
   width: 100%;
   height: 100%;
   background: url(../img/bg2.jpg) no-repeat center;
-  background-size: 100% 100%;  
+  background-size: 100% 100%;
   /*background-attachment: fixed;*/
   position: relative;
   z-index: 100;
@@ -337,20 +347,71 @@ header nav a {
 /*_____________________________________________________________PROJECTS ZONE*/
 
 section#projects{
-  width: 100%;  
-  min-height: 100%; 
+  width: 100%;
+  min-height: 100%;
   background: url(../img/bg1.jpg) no-repeat top;
   background-size: cover;
   position: relative;
   z-index: 200;
   top: 100%;
 }
+#filter-wrapper{
+  width: 100%;
+  margin-top: 15px;
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    li{
+        max-width: 110px;
+        font-weight: 400;
+        flex-grow: 1;
+        box-sizing: border-box;
+        padding: 10px 1%;
+        line-height: 1;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        background: gray;
+        align-content: center;
+        display: flex;
+        align-items: center;
+        border-top: 2px solid $primaryBlue;
+        background: #dedee0; /* Old browsers */
+        background: -moz-linear-gradient(top, #757575 0%, #201F1F 86%, #616161 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #757575 0%,#201F1F 86%, #616161 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #757575 16%, #201F1F 94%, #616161 100%);
+        position: relative;
+
+        &:hover{
+          background: #242424;
+          box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.81);
+          color: #3FFFE2;
+          font-weight: 400;
+          text-shadow: 0 0 9px rgb(0, 0, 0);
+        }
+        &:first-child{
+          border-radius: 0 0 0 15px;
+        }
+        &:last-child{
+          border-radius: 0 0 15px 0;
+        }
+      }
+  }
+}
+
 #itemsWrapper{
   width: 80%;
   min-width: 1024px;
   margin: 0 auto;
   padding: 80px 2%;
-  text-align: left;
+  text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -368,7 +429,7 @@ section#projects{
   -ms-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
   -o-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
   transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
-} 
+}
 #projects .item:hover{
   margin-right: 140px;
 }
