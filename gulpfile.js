@@ -12,7 +12,7 @@ var buffer = require('vinyl-buffer')
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
-
+var eslint = require('gulp-eslint');
 
 var config = {
   port: 8080,
@@ -60,6 +60,7 @@ gulp.task('js', function(){
     browserify(config.paths.mainJs)
       .transform("babelify", {presets: ["es2015", "react"]})
       .bundle()
+      // .pipe(eslint())
       .on('error', console.log.bind(console) )
       .pipe(source('bundle.js'))
       .pipe(buffer())
