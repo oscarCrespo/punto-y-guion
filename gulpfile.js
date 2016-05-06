@@ -8,8 +8,11 @@ var source = require('vinyl-source-stream');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var babelify = require('babelify');
-
-
+var buffer = require('vinyl-buffer')
+var uglify = require('gulp-uglify');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var eslint = require('gulp-eslint');
 
 var config = {
   port: 8080,
@@ -46,8 +49,8 @@ gulp.task('html', function(){
 
 gulp.task('img', function(){
   gulp.src(config.paths.img)
+      .pipe(imagemin({ progressive: true }))
       .pipe(gulp.dest(config.paths.dist + '/img'))
-      .pipe(connect.reload());
 
   gulp.src('./src/favicon.ico')
       .pipe(gulp.dest(config.paths.dist))
@@ -57,15 +60,18 @@ gulp.task('js', function(){
     browserify(config.paths.mainJs)
       .transform("babelify", {presets: ["es2015", "react"]})
       .bundle()
+      // .pipe(eslint())
       .on('error', console.log.bind(console) )
       .pipe(source('bundle.js'))
+      .pipe(buffer())
+      .pipe(uglify())
       .pipe(gulp.dest(config.paths.dist + '/js'))
       .pipe(connect.reload());
 });
 
 gulp.task('css', function(){
     return gulp.src(config.paths.scss)
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest(config.paths.dist + '/css'))
     .pipe(connect.reload());
@@ -77,4 +83,4 @@ gulp.task('watch', function(){
   gulp.watch(config.paths.scss, ['css']);
 });
 
-gulp.task('default', ['html', 'img', 'js', 'css', 'open', 'watch']);
+gulp.task('default', ['html', 'img', 'css', 'js', 'open', 'watch']);
