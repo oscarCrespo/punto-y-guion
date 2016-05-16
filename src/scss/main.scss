@@ -54,6 +54,9 @@ header {
   position: fixed;
   z-index: 800;
 }
+#menuBtn-mobile{
+  display: none;
+}
 #loader{
   width: 100%;
   height: 100%;
@@ -67,6 +70,7 @@ header {
     font-size: 65px;
     color: white;
     font-weight: 100;
+    border-bottom: 1px solid white;
 }
 #projects .thinTittle {
     text-align: center;
@@ -178,19 +182,18 @@ header nav a {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
   z-index: 400;
-  transform-style: preserve-3d;
   box-shadow: 0 5px 5px rgba(0,0,0,0.7);
   background: url("../img/bg3.jpg") no-repeat center;
   background-size: 100% 100%;
-  /*background-blend-mode: multiply;*/
+
 }
 #homeButtons{
   position: absolute;
-  right: 5%;
-  bottom: 5%;
-  margin-top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 7% 3% 4% 10%;
   z-index: 500;
   line-height: 0.9;
 }
@@ -273,7 +276,6 @@ header nav a {
     opacity: 0.9;
 }
 #contacto{
-  top: 100%;
   width: 100%;
   height: 100%;
   background: url(../img/bg2.jpg) no-repeat center;
@@ -353,64 +355,74 @@ section#projects{
   background-size: cover;
   position: relative;
   z-index: 200;
-  top: 100%;
 }
 #filter-wrapper{
   width: 100%;
   margin-top: 15px;
-
-  ul{
+  height: 100%;  
+  
+  > ul{
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 30px 0;
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: stretch;
-
-    li{
-        max-width: 110px;
+    flex-direction: column;
+    border-top: 2px solid $primaryBlue;
+    background: #dedee0;
+    background: -moz-linear-gradient(top, #757575 0%, #201F1F 86%, #616161 100%); 
+    background: -webkit-linear-gradient(top, #757575 0%,#201F1F 86%, #616161 100%); 
+    background: linear-gradient(to bottom, #757575 1%, #201F1F 99%,  #616161 100%);
+    text-align: center;
+    border-radius: 15px 0 0  15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -400px;
+    -webkit-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -ms-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -o-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    z-index: 800;
+    
+    &.active{
+     right: 0;
+    }
+    
+  li.catItem{
+        max-width: 200px;
+        padding: 12px 15px;
         font-weight: 400;
         flex-grow: 1;
         box-sizing: border-box;
-        padding: 10px 1%;
         line-height: 1;
         cursor: pointer;
         color: white;
-        font-size: 16px;
-        background: gray;
-        align-content: center;
-        display: flex;
-        align-items: center;
-        border-top: 2px solid $primaryBlue;
-        background: #dedee0; /* Old browsers */
-        background: -moz-linear-gradient(top, #757575 0%, #201F1F 86%, #616161 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(top, #757575 0%,#201F1F 86%, #616161 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to bottom, #757575 16%, #201F1F 94%, #616161 100%);
+        font-size: 14px;
+        text-align: center;
         position: relative;
-
+        border-bottom: 1px solid #1B1B1B;
+        
+        &.-active,
         &:hover{
           background: #242424;
-          box-shadow: inset 0 3px 15px rgba(0, 0, 0, 0.81);
+          box-shadow: inset -5px 3px 15px rgba(0, 0, 0, 0.81);
           color: #3FFFE2;
           font-weight: 400;
           text-shadow: 0 0 9px rgb(0, 0, 0);
         }
-        &:first-child{
-          border-radius: 0 0 0 15px;
-        }
-        &:last-child{
-          border-radius: 0 0 15px 0;
-        }
       }
-  }
+  }  
+  
 }
 
 #itemsWrapper{
   width: 80%;
-  min-width: 1024px;
   margin: 0 auto;
-  padding: 80px 2%;
+  padding: 40px 2%;
   text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -429,16 +441,29 @@ section#projects{
   -ms-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
   -o-transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
   transition: 0.3s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+  vertical-align: top;
+}
+#projects .item img{
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    -webkit-transition: 0.2s all ease-out;
+  -o-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 #projects .item:hover{
   margin-right: 140px;
+  margin-top: 70px;
+  width: 140px;
 }
 #projects .item:hover img{
 /*   -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    -o-transform: rotate(45deg);
    transform: rotate(45deg);*/
-   box-shadow: 0 0 15px rgba(0,0,0,0.7);
+   
+   border-radius: 30px 0px 30px 30px;
 }
 .item .brand{
   position: absolute;
@@ -492,7 +517,7 @@ section#projects{
   bottom: 50%;
   font-style: normal;
   color: #0dffdf;
-  font-size: 26px;
+  font-size: 20px;
 
 /*  font-weight: 400;*/
 }
@@ -513,17 +538,7 @@ section#projects{
   border-radius: 30px 0px 30px 30px;
 
 }
-.logo.ciudadIdeas{
-  background-image: url(../img/projects/logos/ciudadDeLasIdeas.jpg);
-}
-#projects .item img{
-  width: 100%;
-  box-shadow: 0 0 5px rgba(0,0,0,0.7);
-    -webkit-transition: 0.2s all ease-out;
-  -o-transition: 0.2s all ease-out;
-  transition: 0.2s all ease-out;
-  border-radius: 30px 0px 30px 30px;
-}
+
 .item .tagsGroup{
   position: absolute;
   top: 5%;
@@ -583,13 +598,19 @@ section#projects{
   }
 
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1024px){
+  #itemsWrapper{
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
   #itemsWrapper{
     width: 100%;
     min-width: 100%;
   }
   #projects .item{
-    width: 320px;
+    width: 280px;
+    margin: 40px 2%;
   }
   #projects .item:hover {
       width: 150px;
@@ -598,5 +619,118 @@ section#projects{
   }
   .item:hover .brand{
     font-size: 20px;
+  }
+  .fieldsTitle{
+    font-size: 40px;
+  }
+  .bgImg{
+    width: 1308px;
+    height: auto;
+    left: 47%;
+  }
+  #logo{
+    width: 34px;
+    height: 33px;
+    background-size: 250px;
+    background-position: 47% 72%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+  }
+  .ready header{
+    top: 0;
+    left: 0;
+    padding: 10px 2%;
+    width: 100%;
+    box-sizing: border-box;
+    height: 56px;
+      -webkit-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -ms-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -o-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    
+    &.active{
+      height: 212px;
+    }
+  }
+  #menuBtn-mobile{
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left:0;
+    top: 0;
+  }
+  .hamburguerBtn{
+    width: 60%;
+    height: 3px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    background: white;
+    position: absolute;
+      -webkit-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -ms-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    -o-transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    transition: 0.2s all  cubic-bezier(0.11, 0.42, 0.19, 0.99);
+    box-shadow: 0 0 5px 0rgba(0,0,0,0.5);
+    
+    &:nth-child(1){
+      top: 12px;
+    }
+    &:nth-child(2){
+      top: 21px;
+    }
+    &:nth-child(3){
+      top: 30px;
+    }
+  }
+  #menuBtn-mobile.open .hamburguerBtn{
+   
+    
+    &:nth-child(1){
+      top: 21px;
+      transform: rotateZ(135deg)
+    }
+    &:nth-child(2){
+      top: 21px;
+      transform: rotateZ(-135deg)
+    }
+    &:nth-child(3){
+      top: 21px;
+      transform: rotateZ(135deg)
+    }
+  }
+  header nav{
+    min-width: 100%;
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+    line-height: 31px;
+    padding: 0;
+    
+    &:hover{
+      width: 100%;
+    }
+  }
+ 
+  .btn span{
+    text-align: center;
+    
+  }
+  .btn:hover span{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .contactoWrapper{
+    float: none;
+    top: 50%;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    padding-right: 0;
   }
 }

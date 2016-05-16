@@ -24,7 +24,8 @@ var config = {
     img: './src/img/**/*',
     dist: './dist',
     mainJs: './src/main.js'
-  }
+  },
+  env: 'PROD'
 }
 
 gulp.task('connect', function () {
@@ -71,7 +72,7 @@ gulp.task('js', function(){
 
 gulp.task('css', function(){
     return gulp.src(config.paths.scss)
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: config.env == 'DEV' ? 'extended' : 'compressed' }).on('error', sass.logError))
     .pipe(concat('bundle.css'))
     .pipe(gulp.dest(config.paths.dist + '/css'))
     .pipe(connect.reload());

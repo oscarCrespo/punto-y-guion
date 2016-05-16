@@ -7,8 +7,7 @@ var  CategoryList = [
 	{id: 6,  type: 'regular', content: 'e-Learning'},
 	{id: 7,  type: 'regular', content: 'Interaction Design'},
 	{id: 8,  type: 'regular', content: 'Multimedia'},
-	{id: 9,  type: 'regular', content: 'Product Catalog'},
-	{id: 10, type: 'regular', content: 'Mobile site'},
+	{id: 9,  type: 'regular', content: 'Product Catalog'}
 ];
 
 module.exports = CategoryList;
