@@ -1,4 +1,4 @@
-var smoothScroll = require('./smooth-scroll');
+var smoothScroll = require('smooth-scroll');
 var jQuery = require('jquery');
 
 smoothScroll.init({
@@ -17,11 +17,26 @@ smoothScroll.init({
 	var $images = $imgContainer.find('.bgImg');
 	var $win = $(window);
 	var $tittles = $('#homeButtons');
-
+	var $menuBtn = $("#menuBtn-mobile");
+	var $header = $('header');
+	
 	var $design = $imgContainer.find("#bgDesign");
 	var $interaction = $imgContainer.find("#bgInteraction");
 
-
+	$menuBtn.on('click', ()=>{
+		$menuBtn.hasClass('open') ? offMenu() :  onMenu();
+	} )
+	$header.find('.btn').on('click', ()=>{
+		$menuBtn.hasClass('open') ? offMenu() :  onMenu();
+	} )	
+	function onMenu() {
+		$menuBtn.addClass('open');
+		$header.addClass('active'); 
+	}
+	function offMenu() {
+		$menuBtn.removeClass('open');
+		$header.removeClass('active'); 
+	}
 	function getDimentions() {
 		$winWidth = $win.width();
 		$winHeight = $win.height();
@@ -52,13 +67,9 @@ smoothScroll.init({
 	function mouseMoveFunctions( x, y ) {
 		var floorX = Math.floor(x * 0.80);
 		var floorY = Math.floor(y * 0.1);
-		//console.log(x, y);
 
-		//counter = floorX ;
 		updateField();
 	}
-
-	//$imgContainer.find(targetClass).addClass("-top");
 
 	function changeLanding( field ) {
 		var $bgActive = field == 'interaction' ? $interaction : $design ;
@@ -72,9 +83,8 @@ smoothScroll.init({
 		var yReduced = Math.floor(yPercent * -0.2) + 10;
 		var zNeg = Math.floor(yPercent * -0.8) ;
 		var zPos = Math.floor(yPercent * 0.8) ;
-		console.log(zNeg, zPos)
 		var scaleReduced = xPercent * 0.0041 + 0.6;
-		//console.log(scaleReduced);
+		console.log(yPercent);
 
 		if (xPercent > 50) {
 			$tittles.find('#designBtn').removeClass('highlighted');
@@ -85,15 +95,22 @@ smoothScroll.init({
 			$tittles.find('#designBtn').addClass('highlighted');
 			changeLanding();
 		}
-		$tittles.find('#designBtn').css({
+		if (yPercent < 110){
+			$tittles.find('#designBtn').css({
 			transform: 'perspective(300px) rotateX('+ yReduced +'deg) translateZ(' + zPos + 'px ) rotateY('+ xReduced +'deg)'
-		});
-		$tittles.find('#interactionBtn').css({
-			transform: 'perspective(300px) rotateX('+ yReduced +'deg) translateZ(' +zNeg + 'px ) rotateY('+ xReduced +'deg)'
-		});
-		$tittles.find("#plusSign").css({
-			transform: 'perspective(300px) rotateX('+ yReduced +'deg) translateZ( 0px ) rotateY('+ xReduced +'deg)'
-		});
+			});
+			$tittles.find('#interactionBtn').css({
+				transform: 'perspective(300px) rotateX('+ yReduced +'deg) translateZ(' +zNeg + 'px ) rotateY('+ xReduced +'deg)'
+			});
+			$tittles.find("#plusSign").css({
+				transform: 'perspective(300px) rotateX('+ yReduced +'deg) translateZ( 0px ) rotateY('+ xReduced +'deg)'
+			});
+		}else{
+			$tittles.find('#designBtn').attr('style', '');
+			$tittles.find('#interactionBtn').attr('style', '');
+			$tittles.find("#plusSign").attr('style', '');
+		}
+		
 	}
 	function switchLandingBg(){
 		if ($win.width()>1024) {

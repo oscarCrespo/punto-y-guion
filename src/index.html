@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Punto & Guion</title>
+	<meta name="description" content="UX design and front end development focused on the intersection between design and technology, specialized in handcrafted websites, and interactive applications, featuring responsive design, motion graphics, and 3D">
+	<meta name="keywords" content="digital, design, interaction, UX, UI, motion graphics, front-end development, web app, 3d, technology">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bundle.css">
 </head>
@@ -20,14 +23,29 @@
 		"img/bgInteraction.jpg"
 	);
 
- window.onload = function(){
-	 document.getElementById("loader").style.display="none";
-	 document.getElementById("body").className = "ready";
- }
+	window.onload = function(){
+		document.getElementById("loader").style.display="none";
+		document.getElementById("body").className = "ready";
+	}
+ 
 </script>
 <body id="body" class="loading" >
 	<div id="loader"></div>
-	<div id="home">
+	<header>
+		<a data-scroll href="#home"><h1 id="logo"></h1></a>
+		<div id="menuBtn-mobile">
+			<span class="hamburguerBtn"></span>
+			<span class="hamburguerBtn"></span>
+			<span class="hamburguerBtn"></span>
+		</div>
+		<nav>
+			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
+			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="img/behance.png" width="13" alt=""></div></a>
+			<a href="https://github.com/oscarCrespo" target="_blank"><div class="btn" ><span>GitHub</span> <img src="img/github-circle.png" width="13" alt=""></div></a>
+			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
+		</nav>
+	</header>
+	<section id="home">
 		<div id="imgsBG" class="main-background">
 			<img src="img/bgDesign.jpg" alt="Punto & Guion | Oscar Crespo" id="bgDesign" class="bgImg  -top">
 			<img src="img/bgInteraction.jpg" alt="Punto & Guion | Oscar Crespo" id="bgInteraction" class="bgImg ">
@@ -38,22 +56,18 @@
 			<h2 class="fieldsTitle interaction" id="interactionBtn">Interaction</h2>
 
 		</div>
-	</div>
-	<header>
-		<a data-scroll href="#home"><h1 id="logo"></h1></a>
-		<nav>
-			<a data-scroll href="#projects"><div class="btn"><span>Projects</span></div></a>
-			<a href="http://www.behance.net/puntoyguion" target="_blank"><div class="btn" ><span>Behance</span> <img src="img/behance.png" width="13" alt=""></div></a>
-			<a href="https://github.com/oscarCrespo" target="_blank"><div class="btn" ><span>GitHub</span> <img src="img/github-circle.png" width="13" alt=""></div></a>
-			<a data-scroll href="#contacto"><div class="btn" ><span>Contact</span></div></a>
-		</nav>
-	</header>
+	</section>
+	
+	<section id="about">
+		
+	</section>
 	<section id="projects">
 		<h2 class="thinTittle projects">Projects</h2>
 		<div id="projectsApp">
 			<!-- React Projects app -->
 		</div>
 	</section>
+	
 	<section id="contacto">
 		<div class="contactoWrapper">
 			<h2 class="contactTitle">Contact</h2>
@@ -61,6 +75,7 @@
 			<a href="mailto:hola@puntoyguion.com"><div class="campo"><span>M. </span><strong> hola@puntoyguion.com</strong></div></a>
 		</div>
 	</section>
+	
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

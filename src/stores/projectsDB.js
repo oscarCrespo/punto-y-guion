@@ -31,14 +31,14 @@ class ProjectsDB extends React.Component {
 				name: 'Huggies',
 				img: 'img/projects/huggies.jpg',
 				link: 'https://www.huggies.com.mx/site/',
-				cats: [2,6,7,8,9,10]
+				cats: [2,6,7,8,9]
 			},
 			{
 				id: '5',
 				name: 'Tajin',
 				img: 'img/projects/tajin.jpg',
 				link: 'http://www.tajin.com/',
-				cats: [2,5,7,8,9,10]
+				cats: [2,5,7,8,9]
 			},
 			{
 				id: '6',
@@ -66,7 +66,7 @@ class ProjectsDB extends React.Component {
 				name: 'Ciudad de las ideas',
 				img: 'img/projects/ciudadDeLasIdeas.jpg',
 				link: 'http://www.ciudaddelasideas.com/acercaDe.php',
-				cats: [2,5,7,8,10]
+				cats: [2,5,7,8]
 			},
 			{
 				id: '10',
