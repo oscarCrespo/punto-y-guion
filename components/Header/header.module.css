@@ -1,0 +1,76 @@
+.header {
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  overflow: hidden;
+  position: fixed;
+  z-index: 800;
+}
+
+.headerLink {
+  border-top: 1px solid #fff;
+  width: 110px;
+  height: 31px;
+  margin-top: 3px;
+  line-height: 1;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0, 0.42, 0, 1.02);
+  font-weight: 600;
+  padding: 5px 5px 0 0;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.headerLink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: width 1.8s cubic-bezier(0, 0.42, 0, 1.02), opacity 0.05s ease-in;
+}
+
+.headerLink span {
+  transition: all 0.15s cubic-bezier(0.31, -0.06, 0.1, 1.55);
+  transition-delay: 0.05s;
+  line-height: 1;
+  margin-left: 1%;
+  color: white;
+}
+.headerLink:hover span {
+  padding-top: 20px;
+  font-weight: 300;
+  margin-left: 20%;
+  font-size: 20px;
+  color: #3fffe2;
+}
+
+.headerLink:hover {
+  width: 150px;
+}
+
+.headerLink:hover:after {
+  content: "";
+  opacity: 1;
+  width: 100%;
+}
+
+.linkIcon {
+  width: 13px;
+  margin-left: 2px;
+}
+
+#headerLogo {
+  width: 175px;
+  height: 90px;
+}
