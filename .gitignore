@@ -6,3 +6,5 @@ arte/
 node_modules/
 npm-debug.log
 dist
+.next/
+.bkp
